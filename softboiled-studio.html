@@ -1,8 +1,7 @@
 
-
-<!DOCTYPE html><script>var __pbpa = true;</script><script>var translated_warning_string = 'Warning: Never enter your Tumblr password unless \u201chttps://www.tumblr.com/login\u201d\x0ais the address in your web browser.\x0a\x0aYou should also see a green \u201cTumblr, Inc.\u201d identification in the address bar.\x0a\x0aSpammers and other bad guys use fake forms to steal passwords.\x0a\x0aTumblr will never ask you to log in from a user\u2019s blog.\x0a\x0aAre you absolutely sure you want to continue?';</script><script type="text/javascript" language="javascript" src="https://assets.tumblr.com/assets/scripts/pre_tumblelog.js?_v=b9f848c06fcba7eaf305d4a7cb7a1b98"></script><!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="https://www.w3.org/1999/xhtml">
-<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# blog: http://ogp.me/ns/blog#">
+<head>
 <!--
  
  
@@ -16,11 +15,12 @@
  
  
 -->
-<title>L.Z.C.</title>
-<style>figure{margin:0}.tmblr-iframe{position:absolute}.tmblr-iframe.hide{display:none}.tmblr-iframe--amp-cta-button{visibility:hidden;position:fixed;bottom:10px;left:50%;transform:translateX(-50%);z-index:100}.tmblr-iframe--amp-cta-button.tmblr-iframe--loaded{visibility:visible;animation:iframe-app-cta-transition .2s ease-out}</style><style>figure{margin:0}.tmblr-iframe{position:absolute}.tmblr-iframe.hide{display:none}.tmblr-iframe--amp-cta-button{visibility:hidden;position:fixed;bottom:10px;left:50%;transform:translateX(-50%);z-index:100}.tmblr-iframe--amp-cta-button.tmblr-iframe--loaded{visibility:visible;animation:iframe-app-cta-transition .2s ease-out}</style><link rel="stylesheet" media="screen" href="https://assets.tumblr.com/client/prod/standalone/blog-network-npf/index.build.css?_v=6e121b6530ce38be364bf1089290570b"><link rel="stylesheet" media="screen" href="https://assets.tumblr.com/client/prod/standalone/blog-network-npf/index.build.css?_v=6e121b6530ce38be364bf1089290570b"><link rel="alternate" type="application/rss+xml" href="https://l-chiu.com/rss">
+<title>✿ Softboiled Studio ✿</title>
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
 <link rel="shortcut icon" href="favicon.ico">
-<meta name="description" content="lindy chiu">
+<meta name="description" content="Wares made by Lindy Chiu + Natalie Fang">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
  
 <script src="//use.edgefonts.net/lato.js"></script>
  
@@ -29,7 +29,7 @@
 /* general */
 
 html {
-   overflow:hidden; 
+    overflow:hidden;
 }
  
 body {
@@ -109,23 +109,13 @@ hr {
 /* accents */
  
 .title {
-    
     font-size:12px;
     letter-spacing:1px;
     text-transform:uppercase;
     font-family:lato, 'trebuchet ms', sans-serif;
     color:rgb(36,36,36);
-    margin:-70 auto;
 }
-
 .accent {
-    font-size:11px;
-    letter-spacing:1px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-transform:lowercase;
-    color:rgb(144,144,144);
-}
-.accentother {
     font-size:8px;
     letter-spacing:1px;
     font-family:lato, 'trebuchet ms', sans-serif;
@@ -215,9 +205,8 @@ header {
     top:5vh;
     left:5vh;
     z-index:10;
-    width:40vh;
-    margin:-30px 0 0;
-    
+    width:50vh;
+    margin:-6px 0 0;
 }
 header h1 {
     margin:0 0 1px;
@@ -242,17 +231,55 @@ aside .links li:last-child {
  
 /* icons */
  
-.content {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    height: 100vh;
+.in {
+    position:fixed;
+    bottom:5vh;
+    right:5vh;
+    z-index:12;
+    margin-bottom:-8px;
+    margin-right:-3px;
+    width:21px;
+    height:auto;
+}
+.in svg {
+    visibility:hidden;
+    width:15px;
+    padding:3px;
+}
+.no {
+    position:fixed;
+    bottom:5vh;
+    right:5vh;
+    z-index:12;
+    margin-bottom:-6px;
+    margin-right:22px;
+    width:21px;
+    height:auto;
+}
+.no svg {
+    width:12px;
+    padding:3px;
+}
+.ic {
+    position:fixed;
+    top:5vh;
+    right:5vh;
+    z-index:13;
+    margin:-3px 0 0 0;
+}
+.ic svg {
+    width:12px;
 }
 
+.content {
+    overflow-y:scroll;
+    height:100vh;
+    scroll-snap-type:y mandatory;
+}
  
 /* entries */
- 
 .entry {
-    scroll-snap-align: center;
+    scroll-snap-align:center;
     position:relative;
     height:75vh;
     max-height:75vh;
@@ -294,8 +321,8 @@ aside .links li:last-child {
 }
  
 /* post info */
- 
-.b {
+ .b {
+    visibility:hidden;
     position:absolute;
     right:5vh;
     bottom:5vh;
@@ -321,13 +348,14 @@ aside .links li:last-child {
     background-color:rgb(255,255,255);
 }
 .tags {
-    display:none;
+    {block:IndexPage}{block:ifNotShowTags}display:none;{/block:ifNotShowTags}{/block:IndexPage}
 }
 .tags a {
     margin:0 5px;
     font-style:normal;
 }
  
+
 /* post types */
  
 .text {
@@ -341,9 +369,8 @@ aside .links li:last-child {
 .text *:last-child {
     margin-bottom:0;
 }
-
 .caption {
-    display:none;
+    {block:IndexPage}{block:ifNotShowCaptions}display:none;{/block:ifNotShowCaptions}{/block:IndexPage}
 }
 .chat .line {
     margin:13px 0 0;
@@ -480,7 +507,7 @@ aside .links li:last-child {
     position:fixed!important;
     top:-9px!important;
     right:0!important;
-    opacity:0!important;
+    {block:IndexPage}opacity:0!important;{/block:IndexPage}
     -webkit-filter:invert(100%);
     -webkit-backface-visibility:hidden;
     transform:scale(.93,.93);
@@ -494,10 +521,46 @@ aside .links li:last-child {
     opacity:.4!important;
 }
 
+
+@media (max-width: 700px) {
+    .entry {
+        position:relative;
+        height:90vh;
+        max-height:90vh;
+        width:calc(100vw - 10vh);
+        padding:5vh;
+        margin:auto;
+        overflow:hidden;
+        text-align:center;
+        counter-increment:posts;
+    }
+    .entry .post {
+        width:80vh;
+        padding:0 16px;
+        overflow:auto;
+    }
+    .post,
+    .media,
+    .photo {
+        display:block;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        max-height:90vh;
+        max-width:calc(100vw - 10vh);
+    }
+    .post img {
+        max-height:90vh;
+        max-width:calc(100vw - 10vh);
+        width:auto;
+    }
+}
+
+ 
 </style>
 <link href="//static.tumblr.com/qudkd6d/OcDnl99gb/style.css" rel="stylesheet" type="text/css">
-<meta name="robots" content="noindex"/><link rel="alternate" href="android-app://com.tumblr/tumblr/x-callback-url/blog?blogName=lindyzc%26postID=184423616977" /><link rel="alternate" href="ios-app://305343404/tumblr/x-callback-url/blog?blogName=lindyzc&postID=184423616977" /><link rel="alternate" type="application/json+oembed" href="https://www.tumblr.com/oembed/1.0?url=https://l-chiu.com/post/184423616977" title=""/><script src="https://assets.tumblr.com/assets/scripts/tumblelog_post_message_queue.js?_v=a8fadfa499d8cb7c3f8eefdf0b1adfdd"></script><link rel="stylesheet" type="text/css" href="https://assets.tumblr.com/fonts/ziclets/stylesheet.css?v=1"><meta name="keywords" content="sw,japan,ny" /><!-- BEGIN TUMBLR FACEBOOK OPENGRAPH TAGS --><!-- If you'd like to specify your own Open Graph tags, define the og:url and og:title tags in your theme's HTML. --><!-- Read more: http://ogp.me/ --><meta property="fb:app_id" content="48119224995" /><meta property="og:title" content="L.Z.C." /><meta property="og:url" content="https://l-chiu.com/?og=1" /><meta property="og:description" content="lindy chiu" /><meta property="og:type" content="tumblr-feed:tumblelog" /><meta property="og:image" content="https://66.media.tumblr.com/avatar_976eaaade65b_128.pnj" /><meta property="al:ios:url" content="tumblr://x-callback-url/blog?blogName=lindyzc" /><meta property="al:ios:app_name" content="Tumblr" /><meta property="al:ios:app_store_id" content="305343404" /><meta property="al:android:url" content="tumblr://x-callback-url/blog?blogName=lindyzc" /><meta property="al:android:app_name" content="Tumblr" /><meta property="al:android:package" content="com.tumblr" /><!-- END TUMBLR FACEBOOK OPENGRAPH TAGS --><!-- TWITTER TAGS --><meta charset="utf-8"><meta name="twitter:site" content="tumblr" /><meta name="twitter:card" content="app" /><meta name="twitter:description" content="lindyzc" /><meta name="twitter:title" content="lindyzc" /><meta name="twitter:app:name:iphone" content="Tumblr" /><meta name="twitter:app:name:ipad" content="Tumblr" /><meta name="twitter:app:name:googleplay" content="Tumblr" /><meta name="twitter:app:id:iphone" content="305343404" /><meta name="twitter:app:id:ipad" content="305343404" /><meta name="twitter:app:id:googleplay" content="com.tumblr" /><meta name="twitter:app:url:iphone" content="tumblr://x-callback-url/blog?blogName=lindyzc&amp;referrer=twitter-cards" /><meta name="twitter:app:url:ipad" content="tumblr://x-callback-url/blog?blogName=lindyzc&amp;referrer=twitter-cards" /><meta name="twitter:app:url:googleplay" content="tumblr://x-callback-url/blog?blogName=lindyzc&amp;referrer=twitter-cards" /><!-- GOOGLE CAROUSEL --><script type="application/ld+json">
-	{"@type":"ItemList","url":"https:\/\/l-chiu.com","itemListElement":[{"@type":"ListItem","position":1,"url":"https:\/\/l-chiu.com\/post\/184506935112"},{"@type":"ListItem","position":2,"url":"https:\/\/l-chiu.com\/post\/184426273947\/shades-of-green-tokyo-japan"},{"@type":"ListItem","position":3,"url":"https:\/\/l-chiu.com\/post\/184424443862\/glimpses-through-the-fog-hakone-mt-nantai"},{"@type":"ListItem","position":4,"url":"https:\/\/l-chiu.com\/post\/184424370007\/similar-hues-of-blue-kyoto-togetsu-bridge"},{"@type":"ListItem","position":5,"url":"https:\/\/l-chiu.com\/post\/184424223137\/reflections-of-rock-zion-national-park-utah"},{"@type":"ListItem","position":6,"url":"https:\/\/l-chiu.com\/post\/184424155062\/slopes-and-patterns-zion-national-park-utah"},{"@type":"ListItem","position":7,"url":"https:\/\/l-chiu.com\/post\/184424077012"},{"@type":"ListItem","position":8,"url":"https:\/\/l-chiu.com\/post\/184423716512"},{"@type":"ListItem","position":9,"url":"https:\/\/l-chiu.com\/post\/184423672162"},{"@type":"ListItem","position":10,"url":"https:\/\/l-chiu.com\/post\/184423616977"}],"@context":"http:\/\/schema.org"}</script><link rel="canonical" href="https://l-chiu.com" /><script src="https://assets.tumblr.com/assets/scripts/tumblelog_post_message_queue.js?_v=a8fadfa499d8cb7c3f8eefdf0b1adfdd"></script><link rel="stylesheet" type="text/css" href="https://assets.tumblr.com/fonts/ziclets/stylesheet.css?v=1"><link rel="canonical" href="https://l-chiu.com/ceramics" /></head>
+</head>
 <body>
 <div class="main">
 
@@ -511,7 +574,6 @@ aside .links li:last-child {
     <li><a href="softboiled-studio.html">softboiled studio</a></li> 
   </div>
 </aside>
-
 
 <header>
     <h1 class="title"></br><a href="index.html"><img class="title" src= "https://66.media.tumblr.com/b0c2b26aa2275dca500a740f1d36b1f5/61970a2b3a4f43dc-f9/s1280x1920/ddaee861982041f48c451498e713fcb32b1e1484.png" width="135" height="135" alt="softboiled studio">softboiled studio</a></h1>
@@ -759,109 +821,12 @@ aside .links li:last-child {
         <img src="https://66.media.tumblr.com/076effa17906345e4032bd6434b6aa4e/05006dbb27b51aa9-e5/s1280x1920/2e17d6c42a738857ec7d9d11e2dab3bf69effdda.jpg">
         <div class="accent"> (#29) confetti hair barette - french backing </br> 3/3</div>
     </a>
-    
-</section>
-<section class="b">
-<a href="#" target="_blank" class="button"></a>
-</section>
-<section class="info">
 
-</section>
-
-</article>
-
-
-<div class="in"><svg version="1.1" id="Layer_1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" x="0px" y="0px"
-     viewBox="0 0 216 216" enable-background="new 0 0 216 216" xml:space="preserve">
-<path d="M102,79v-6c0-3.3,2.7-6,6-6s6,2.7,6,6v6c0,3.3-2.7,6-6,6S102,82.3,102,79z M96,109h6v34c0,3.3,2.7,6,6,6s6-2.7,6-6v-40
-    c0-3.3-2.7-6-6-6H96c-3.3,0-6,2.7-6,6S92.7,109,96,109z M186.1,35.9v144.2c0,3.3-2.7,6-6,6H35.9c-3.3,0-6-2.7-6-6V35.9
-    c0-3.3,2.7-6,6-6h144.2C183.4,29.9,186.1,32.6,186.1,35.9z M174.1,41.9H41.9v132.2h132.2V41.9z"/>
-</svg></div>
-<div class="ic"><svg xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 438.317 438.317" style="enable-background:new 0 0 438.317 438.317;" xml:space="preserve"><g><g><path d="M31.167,266.192l20.4,9.35c8.5,3.967,12.467,13.6,9.35,22.383l-7.933,20.967c-5.95,16.15-3.967,33.433,5.95,47.317    c9.633,14.167,25.5,22.383,42.5,22.383c6.233,0,12.467-1.133,18.417-3.4l20.967-7.933c1.983-0.85,3.967-1.133,6.233-1.133    c6.8,0,13.317,3.967,16.15,10.483l9.35,20.4c8.5,18.7,26.633,30.317,47.033,30.317s38.533-11.617,47.033-30.317l9.35-20.4    c2.833-6.233,9.067-10.483,16.15-10.483c1.983,0,4.25,0.283,6.233,1.133l20.967,8.217c5.95,2.267,12.183,3.683,18.417,3.683l0,0    c16.717,0,32.583-8.783,42.5-22.667c9.633-14.167,11.9-31.45,5.95-47.6l-7.933-20.967c-3.117-8.783,0.85-18.417,9.35-22.383    l20.4-9.35c18.7-8.5,30.317-26.633,30.317-47.033S426.7,180.625,408,172.125l-20.4-9.35c-8.5-3.967-12.467-13.6-9.35-22.383    l7.933-20.967c5.95-16.15,3.967-33.433-5.95-47.317c-9.633-14.167-25.5-22.383-42.5-22.383c-6.233,0-12.467,1.133-18.417,3.4    l-20.967,7.933c-1.983,0.85-3.967,1.133-6.233,1.133c-6.8,0-13.317-3.967-16.15-10.483l-9.35-20.4    c-8.5-18.7-26.633-30.317-47.033-30.317s-39.383,11.9-47.883,30.6l-9.35,20.4c-2.833,6.233-9.067,10.483-16.15,10.483    c-1.983,0-4.25-0.283-6.233-1.133L119,53.408c-5.95-2.267-12.183-3.4-18.417-3.4c-16.717,0-32.583,8.5-42.5,22.383    c-9.633,14.167-11.9,31.45-5.95,47.317l7.933,20.967c3.117,8.783-0.85,18.417-9.35,22.383l-20.4,9.35    C11.617,180.908,0,199.042,0,219.442S12.467,257.692,31.167,266.192z M45.05,203.008l20.4-9.35    c24.65-11.333,36.55-39.95,26.917-65.167l-7.933-20.967c-2.833-7.65,0-13.317,1.983-16.15c4.533-6.8,13.033-9.633,20.967-6.517    l20.967,7.933c5.95,2.267,11.9,3.4,18.133,3.4l0,0c20.117,0,38.533-11.9,47.033-30.317l9.35-20.4    c4.25-9.633,13.317-10.483,16.15-10.483c2.833,0,11.617,0.85,16.15,10.483l9.35,20.4c8.5,18.417,26.917,30.317,47.033,30.317    c6.233,0,12.183-1.133,18.133-3.4l20.967-7.933c7.933-2.833,16.15,0,20.967,6.517c1.983,2.833,4.817,8.5,1.983,16.15    l-7.933,20.967c-9.35,25.217,2.267,53.833,26.917,65.167l20.4,9.35c9.633,4.25,10.483,13.317,10.483,16.15    c0,2.833-0.85,11.617-10.483,16.15l-20.4,9.35c-24.65,11.333-36.55,39.95-26.917,65.167l7.933,20.967    c2.833,7.65,0,13.317-1.983,16.15c-4.533,6.8-13.033,9.633-20.967,6.517l-20.967-7.933c-5.95-2.267-11.9-3.4-18.133-3.4    c-20.117,0-38.533,11.9-47.033,30.317l-9.35,20.4c-4.25,9.633-13.317,10.483-16.15,10.483c-2.833,0-11.617-0.85-16.15-10.483    l-9.35-20.4c-8.5-18.417-26.917-30.317-47.033-30.317c-6.233,0-12.183,1.133-18.133,3.4l-20.967,7.933    c-7.933,2.833-16.15,0-20.967-6.517c-1.983-2.833-4.817-8.5-1.983-16.15l7.933-20.967c9.35-25.217-2.267-53.833-26.917-65.167    l-20.4-9.35c-9.633-4.25-10.483-13.317-10.483-16.15C34.567,216.325,35.417,207.542,45.05,203.008z"/><path d="M218.733,292.825c40.517,0,73.667-33.15,73.667-73.667s-33.15-73.667-73.667-73.667s-73.667,33.15-73.667,73.667    S177.933,292.825,218.733,292.825z M218.733,179.492c21.817,0,39.667,17.85,39.667,39.667s-17.85,39.667-39.667,39.667    s-39.667-17.85-39.667-39.667S196.917,179.492,218.733,179.492z"/></g></g></svg></div>
-
-<!--  -->
+</div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="https://static.tumblr.com/qudkd6d/Az6nkemqr/pxuphotoset.min.js"></script>
 <script src="//static.tumblr.com/fwgzvyf/l6jnyutne/shythemes.vr.js"></script>
 <script src="//static.tumblr.com/fwgzvyf/4hio5bpwj/jquery.mousewheel.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/gh/1stepremoved/lindy-chius-website-adjustments@07eb2673aa799311bc6beaea7a622d22c399085c/scrolling-function.js"></script>
-
-<iframe scrolling="no" width="1" height="1" frameborder="0" style="background-color:transparent; overflow:hidden; position:absolute; top:0; left:0; z-index:9999;" id="ga_target"></iframe><script type="text/javascript">
-    (function(){
-        var analytics_frame = document.getElementById('ga_target');
-        var analytics_iframe_loaded;
-        var user_logged_in;
-        var blog_is_nsfw = 'No';
-
-        var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
-        var eventer = window[eventMethod];
-        var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
-        eventer(messageEvent,function(e) {
-            var message = (e.data && e.data.split) ? e.data.split(';') : '';
-            switch (message[0]) {
-                case 'analytics_iframe_loaded':
-                    analytics_iframe_loaded = true;
-                    postCSMessage();
-                    postGAMessage();
-                    break;
-                case 'user_logged_in':
-                    user_logged_in = message[1];
-                    postGAMessage();
-                    break;
-            }
-        }, false);
-
-        analytics_frame.src = "https://assets.tumblr.com/analytics.html?_v=f5cf4ddfa3c5301b7df129f74ead90c9#" +
-                              "https://l-chiu.com";
-        function postGAMessage() {
-            if (analytics_iframe_loaded && user_logged_in) {
-                var is_ajax = false;
-                analytics_frame.contentWindow.postMessage(['tick_google_analytics', is_ajax, user_logged_in, blog_is_nsfw, '/?route=%2F'].join(';'), analytics_frame.src.split('/analytics.html')[0]);
-            }
-        }
-        function postCSMessage() {
-            COMSCORE = true;
-            analytics_frame.contentWindow.postMessage('enable_comscore;' + window.location, analytics_frame.src.split('/analytics.html')[0]);
-        }
-    })();
-</script><script type="text/javascript" nonce="SNHu8a4zgN3ef6oUKyjujSNJDfU">!function(s){s.src='https://px.srvcs.tumblr.com/impixu?T=1580093491&J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDovL2wtY2hpdS5jb20vIiwicmVxdHlwZSI6MCwicm91dGUiOiIvIn0=&U=CIHJHIFHHB&K=852db70c3494c628b8a7d5e5edff3306bc0caa18726e13bf99e390552066f26d&R=https%3A%2F%2Fl-chiu.com%2Fart'.replace(/&R=[^&$]*/,'').concat('&R='+escape(document.referrer)).slice(0,2000).replace(/%.?.?$/,'');}(new Image());</script><noscript><img style="position:absolute;z-index:-3334;top:0px;left:0px;visibility:hidden;" src="https://px.srvcs.tumblr.com/impixu?T=1580093491&J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDovL2wtY2hpdS5jb20vIiwicmVxdHlwZSI6MCwicm91dGUiOiIvIiwibm9zY3JpcHQiOjF9&U=CIHJHIFHHB&K=d99764a9bc1e7eec5c615a6b74ca9ae27622088025f221651ea836f2b583ecb6&R=https%3A%2F%2Fl-chiu.com%2Fart"></noscript><script type="text/javascript" nonce="SNHu8a4zgN3ef6oUKyjujSNJDfU">!function(s){s.src='https://px.srvcs.tumblr.com/impixu?T=1580093491&J=eyJ0eXBlIjoicG9zdCIsInVybCI6Imh0dHA6Ly9sLWNoaXUuY29tLyIsInJlcXR5cGUiOjAsInJvdXRlIjoiLyIsInBvc3RzIjpbeyJwb3N0aWQiOiIxODQ1MDY5MzUxMTIiLCJibG9naWQiOjQ1NzYwNjMyMCwic291cmNlIjozM30seyJwb3N0aWQiOiIxODQ0MjYyNzM5NDciLCJibG9naWQiOjQ1NzYwNjMyMCwic291cmNlIjozM30seyJwb3N0aWQiOiIxODQ0MjQ0NDM4NjIiLCJibG9naWQiOjQ1NzYwNjMyMCwic291cmNlIjozM30seyJwb3N0aWQiOiIxODQ0MjQzNzAwMDciLCJibG9naWQiOjQ1NzYwNjMyMCwic291cmNlIjozM30seyJwb3N0aWQiOiIxODQ0MjQyMjMxMzciLCJibG9naWQiOjQ1NzYwNjMyMCwic291cmNlIjozM30seyJwb3N0aWQiOiIxODQ0MjQxNTUwNjIiLCJibG9naWQiOjQ1NzYwNjMyMCwic291cmNlIjozM30seyJwb3N0aWQiOiIxODQ0MjQwNzcwMTIiLCJibG9naWQiOjQ1NzYwNjMyMCwic291cmNlIjozM30seyJwb3N0aWQiOiIxODQ0MjM3MTY1MTIiLCJibG9naWQiOjQ1NzYwNjMyMCwic291cmNlIjozM30seyJwb3N0aWQiOiIxODQ0MjM2NzIxNjIiLCJibG9naWQiOjQ1NzYwNjMyMCwic291cmNlIjozM30seyJwb3N0aWQiOiIxODQ0MjM2MTY5NzciLCJibG9naWQiOjQ1NzYwNjMyMCwic291cmNlIjozM31dfQ==&U=KMMECNCKPC&K=5ae3379302449c22231df3534ca0e62e01c7fe032adcf7eb6f46f289bd095349&R=https%3A%2F%2Fl-chiu.com%2Fart'.replace(/&R=[^&$]*/,'').concat('&R='+escape(document.referrer)).slice(0,2000).replace(/%.?.?$/,'');}(new Image());</script><noscript><img style="position:absolute;z-index:-3334;top:0px;left:0px;visibility:hidden;" src="https://px.srvcs.tumblr.com/impixu?T=1580093491&J=eyJ0eXBlIjoicG9zdCIsInVybCI6Imh0dHA6Ly9sLWNoaXUuY29tLyIsInJlcXR5cGUiOjAsInJvdXRlIjoiLyIsInBvc3RzIjpbeyJwb3N0aWQiOiIxODQ1MDY5MzUxMTIiLCJibG9naWQiOjQ1NzYwNjMyMCwic291cmNlIjozM30seyJwb3N0aWQiOiIxODQ0MjYyNzM5NDciLCJibG9naWQiOjQ1NzYwNjMyMCwic291cmNlIjozM30seyJwb3N0aWQiOiIxODQ0MjQ0NDM4NjIiLCJibG9naWQiOjQ1NzYwNjMyMCwic291cmNlIjozM30seyJwb3N0aWQiOiIxODQ0MjQzNzAwMDciLCJibG9naWQiOjQ1NzYwNjMyMCwic291cmNlIjozM30seyJwb3N0aWQiOiIxODQ0MjQyMjMxMzciLCJibG9naWQiOjQ1NzYwNjMyMCwic291cmNlIjozM30seyJwb3N0aWQiOiIxODQ0MjQxNTUwNjIiLCJibG9naWQiOjQ1NzYwNjMyMCwic291cmNlIjozM30seyJwb3N0aWQiOiIxODQ0MjQwNzcwMTIiLCJibG9naWQiOjQ1NzYwNjMyMCwic291cmNlIjozM30seyJwb3N0aWQiOiIxODQ0MjM3MTY1MTIiLCJibG9naWQiOjQ1NzYwNjMyMCwic291cmNlIjozM30seyJwb3N0aWQiOiIxODQ0MjM2NzIxNjIiLCJibG9naWQiOjQ1NzYwNjMyMCwic291cmNlIjozM30seyJwb3N0aWQiOiIxODQ0MjM2MTY5NzciLCJibG9naWQiOjQ1NzYwNjMyMCwic291cmNlIjozM31dLCJub3NjcmlwdCI6MX0=&U=KMMECNCKPC&K=06f350177ef13b1f8d83d343f98f0b9e5b5f1f7cd3df7389369efa6611b50587&R=https%3A%2F%2Fl-chiu.com%2Fart"></noscript><noscript id="bootloader" data-bootstrap="{&quot;Components&quot;:{&quot;PostActivity&quot;:[],&quot;NotificationPoller&quot;:{&quot;messaging_keys&quot;:[],&quot;token&quot;:&quot;c86f8a500596474a7ef5034081f694bd&quot;,&quot;inbox_unread&quot;:0},&quot;DesktopDashboardLogo&quot;:{&quot;animations&quot;:[[&quot;https:\/\/assets.tumblr.com\/images\/logo\/hover-animations\/1.png?_v=161861acded461bb6e995593a3bae835&quot;,&quot;https:\/\/assets.tumblr.com\/images\/logo\/hover-animations\/1@2x.png?_v=496a774637302a598c851381d00009b0&quot;]]},&quot;TumblelogIframe&quot;:{&quot;unified&quot;:true,&quot;variant&quot;:null,&quot;isCompact&quot;:true,&quot;tumblelogBundleSrc&quot;:&quot;https:\/\/assets.tumblr.com\/client\/prod\/standalone\/tumblelog\/index.build.js?_v=79ae040c72f5f61c7a3da44a93b6c4c8&quot;,&quot;tumblelogName&quot;:&quot;lindyzc&quot;,&quot;isLoggedIn&quot;:false,&quot;isFriend&quot;:false,&quot;formKey&quot;:&quot;&quot;,&quot;canSubscribe&quot;:false,&quot;isSubscribed&quot;:false,&quot;tumblelogTitle&quot;:&quot;L.Z.C.&quot;,&quot;tumblelogAvatar&quot;:&quot;https:\/\/66.media.tumblr.com\/avatar_976eaaade65b_64.pnj&quot;,&quot;tumblelogHost&quot;:&quot;https:\/\/l-chiu.com&quot;,&quot;isOptica&quot;:false,&quot;isCustomTheme&quot;:true,&quot;themeHeaderImage&quot;:&quot;https:\/\/static.tumblr.com\/f2002f55f18d69f42bf91d67bce70c45\/ppnsnoo\/6Ovpmlajm\/tumblr_static_tumblr_static_e1abm29u6mo84s44gwwg48gsg_focused_v3.jpg&quot;,&quot;themeBackgroundColor&quot;:&quot;#FAFAFA&quot;,&quot;themeTitleColor&quot;:&quot;#f5ad58&quot;,&quot;themeAccentColor&quot;:&quot;#529ECC&quot;,&quot;brag&quot;:false,&quot;adsEnabled&quot;:false,&quot;canShowAd&quot;:true,&quot;isPremium&quot;:false,&quot;showLrecAds&quot;:false,&quot;showStickyLrecBackfill&quot;:false,&quot;showGeminiAds&quot;:false,&quot;geminiSectionCodeDesktop&quot;:&quot;a10bca9c-0c5d-4a02-ab13-14ab8513d81d&quot;,&quot;geminiSectionCodeMobile&quot;:&quot;ced63809-b609-4aca-96a0-abc099acba6b&quot;,&quot;currentPageType&quot;:&quot;blog&quot;,&quot;currentPage&quot;:&quot;1&quot;,&quot;searchQuery&quot;:&quot;&quot;,&quot;tag&quot;:&quot;&quot;,&quot;query&quot;:&quot;&quot;,&quot;chrono&quot;:false,&quot;postId&quot;:&quot;&quot;,&quot;src&quot;:&quot;https:\/\/l-chiu.com\/&quot;,&quot;postUrl&quot;:&quot;&quot;,&quot;isBlocked&quot;:null,&quot;isAdmin&quot;:false,&quot;lookupButtonUrl&quot;:&quot;&quot;,&quot;showSpamButton&quot;:false,&quot;showRootPostButton&quot;:false,&quot;rootPostUrl&quot;:&quot;&quot;,&quot;showRadarPostButton&quot;:false,&quot;radarKeys&quot;:&quot;&quot;,&quot;isUniblocked&quot;:false,&quot;isNsfw&quot;:false,&quot;isAdult&quot;:false,&quot;isSpam&quot;:false,&quot;isPrimaryBlog&quot;:false,&quot;canEdit&quot;:false,&quot;canReblogSelf&quot;:false,&quot;showLikeButton&quot;:false,&quot;showReblogButton&quot;:false,&quot;reblogUrl&quot;:&quot;&quot;,&quot;showFanMailButton&quot;:false,&quot;showMessagingButton&quot;:false,&quot;loginCheckIframeSrc&quot;:&quot;https:\/\/assets.tumblr.com\/assets\/html\/iframe\/login_check.html?_v=3de94a184d600617102ddd5b48fb36e9&quot;,&quot;appInstallUrls&quot;:{&quot;android&quot;:&quot;https:\/\/play.google.com\/store\/apps\/details?id=com.tumblr\u0026referrer=utm_source%3Dtumblr%26utm_medium%3Diframe%26utm_campaign%3Dtumblr_new_iframe&quot;,&quot;ios&quot;:&quot;https:\/\/itunes.apple.com\/app\/apple-store\/id305343404?pt=9029\u0026ct=tumblr_new_iframe\u0026mt=8&quot;},&quot;appOpenReferrer&quot;:&quot;tumblr_new_iframe&quot;,&quot;isShowSearch&quot;:false,&quot;supplyLogging&quot;:[],&quot;secondsSinceLastActivity&quot;:-1}},&quot;Flags&quot;:{&quot;doods&quot;:&quot;eyJmaWx0ZXJfbnNmdyI6dHJ1ZSwic2FmZV9tb2RlIjp0cnVlLCJzYWZlX21vZGVfZW5hYmxlZCI6dHJ1ZSwia2V5Y29tbWFuZF9hdXRvX3BhZ2luYXRlIjp0cnVlLCJsb2dnZWRfb3V0X3NlYXJjaCI6dHJ1ZSwia3Jha2VuX3dlYl9sb2dnaW5nX2xpYnJhcnkiOnRydWUsInR1bWJsZWxvZ19wb3BvdmVyIjp0cnVlLCJjYW5vbmljYWxfdXJsX3dyaXRlcyI6dHJ1ZSwiZW5hYmxlX2NhcHR1cmVfanMiOnRydWUsInRhYmxldF9iYW5uZXJfYWN0aXZlIjp0cnVlLCJtb2JpbGVfYmFubmVyX2FjdGl2ZSI6dHJ1ZSwibG9nX3NlYXJjaF9ib3giOnRydWUsInVzZXJfbWVudGlvbnMiOnRydWUsImh0bWw1X2F1ZGlvX3BsYXllciI6dHJ1ZSwicG9wb3Zlcl9yZWNvbW1lbmRhdGlvbnMiOnRydWUsImluZGFzaF9yZWNvbW1lbmRhdGlvbnMiOnRydWUsInBvcHRpY2FfdHVtYmxlbG9nX3BvcG92ZXJzIjp0cnVlLCJkZXByZWNhdGVfZmVhdHVyZWRfdGFncyI6dHJ1ZSwidGFiX3N3aXRjaGVyIjp0cnVlLCJmYXN0X2NvbXBvc2UiOnRydWUsImRhc2hib2FyZF9yZWZyZXNoIjp0cnVlLCJtb2JpbGVfd2ViX3Bob3Rvc2V0cyI6dHJ1ZSwibW9iaWxlX3dlYl9nYXRlIjp0cnVlLCJtb2JpbGVfd2ViX3BhZ2VfdGl0bGVzIjp0cnVlLCJkb250X2Nhc3RfanNfZm9sbG93cyI6dHJ1ZSwiYWRzX25ld192ZW5kb3JfYnV0dG9ucyI6dHJ1ZSwicmVhY3RpdmF0aW9uX2Zsb3ciOnRydWUsImd1bHBqc19hZG1pbiI6dHJ1ZSwiZW5hYmxlX2pzX2Vycm9yc19sb2ciOnRydWUsImVuYWJsZV9qc19lcGhlbWVyYWxfbG9nIjp0cnVlLCJsb2dfbGFkeSI6dHJ1ZSwiY3Nsb2dnZXJfanMiOnRydWUsImRpc2NvdmVyeV9odWJfYWNjZXNzIjp0cnVlLCJoZWFkZXJfYWNjb3VudF9tZW51Ijp0cnVlLCJlbmFibGVfc2hhcmVfZW1iZWRfY29kZSI6dHJ1ZSwicGVlcHJfc2VhcmNoX2FuZF9maWx0ZXIiOnRydWUsImZvbGxvd2VkX3NlYXJjaGVzX2JpZ193ZWIiOnRydWUsImxpdmVwaG90b3Nfd2ViIjp0cnVlLCJ1c2VyX3RhZ19maWx0ZXJpbmciOnRydWUsInByb2plY3RfeF9hcHBlYWwiOnRydWUsInByb2plY3RfeF93ZWJfc2Vuc2l0aXZlX2NvdmVycyI6dHJ1ZSwic2FmZV9tb2RlX293bl9wb3N0Ijp0cnVlLCJoaWRlX2RlZmF1bHRfaGVhZGVyc19ibG9nX2NhcmRzIjp0cnVlLCJub3RpZmljYXRpb25fcmVwbHlfbGlua190b19ub3RlcyI6dHJ1ZSwidHlwaW5nX2luZGljYXRvcl93cml0ZSI6dHJ1ZSwiZ2Rwcl9ndWNlX2lzX3JlcXVpcmVkIjp0cnVlLCJ0dW1ibHJfdmlkZW9fc3BvbnNvcmVkX2RheSI6dHJ1ZSwiY2FwdGNoYTp1c2VfcmVjYXB0Y2hhMiI6dHJ1ZSwiZGFybGFfYWRfZmVlZGJhY2siOnRydWUsInN0YXR1c19pbmRpY2F0b3IiOnRydWUsImRpc2FibGVfeWFob29fYl9jb29raWUiOnRydWUsImxpdmVwaG90b3MiOnRydWV9&quot;},&quot;Context&quot;:{&quot;name&quot;:&quot;default&quot;,&quot;time&quot;:1580093491000,&quot;userinfo&quot;:{&quot;primary&quot;:&quot;&quot;,&quot;name&quot;:&quot;&quot;,&quot;channels&quot;:[]},&quot;hosts&quot;:{&quot;assets_host&quot;:&quot;https:\/\/assets.tumblr.com&quot;,&quot;secure_assets_host&quot;:&quot;https:\/\/assets.tumblr.com&quot;,&quot;www_host&quot;:&quot;https:\/\/www.tumblr.com&quot;,&quot;secure_www_host&quot;:&quot;https:\/\/www.tumblr.com&quot;,&quot;embed_host&quot;:&quot;https:\/\/embed.tumblr.com&quot;,&quot;safe_host&quot;:&quot;https:\/\/safe.txmblr.com&quot;,&quot;platform_host&quot;:&quot;https:\/\/platform.tumblr.com&quot;},&quot;language&quot;:&quot;en_US&quot;,&quot;language_simple&quot;:&quot;en&quot;,&quot;assets&quot;:&quot;https:\/\/assets.tumblr.com\/client\/prod\/&quot;},&quot;Translations&quot;:{&quot;%1$sReport %2$s&#039;s post?%3$sIf it violates our community guidelines, we&#039;ll remove it.%4$s&quot;:&quot;%1$sReport %2$s&#039;s reblog?%3$sIf it violates our community guidelines, we&#039;ll remove it.%4$s&quot;,&quot;%1$sReport %2$s&#039;s reply?%3$sIf it violates our community guidelines, we&#039;ll remove it.%4$s&quot;:&quot;%1$sReport %2$s&#039;s reblog?%3$sIf it violates our community guidelines, we&#039;ll remove it.%4$s&quot;}}"></noscript><script src="https://assets.tumblr.com/client/prod/standalone/tumblelog/index.build.js?_v=79ae040c72f5f61c7a3da44a93b6c4c8"></script><iframe scrolling="no" width="1" height="1" frameborder="0" style="background-color:transparent; overflow:hidden; position:absolute; top:0; left:0; z-index:9999;" id="ga_target"></iframe><script type="text/javascript">
-    (function(){
-        var analytics_frame = document.getElementById('ga_target');
-        var analytics_iframe_loaded;
-        var user_logged_in;
-        var blog_is_nsfw = 'No';
-
-        var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
-        var eventer = window[eventMethod];
-        var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
-        eventer(messageEvent,function(e) {
-            var message = (e.data && e.data.split) ? e.data.split(';') : '';
-            switch (message[0]) {
-                case 'analytics_iframe_loaded':
-                    analytics_iframe_loaded = true;
-                    postCSMessage();
-                    postGAMessage();
-                    break;
-                case 'user_logged_in':
-                    user_logged_in = message[1];
-                    postGAMessage();
-                    break;
-            }
-        }, false);
-
-        analytics_frame.src = "https://assets.tumblr.com/analytics.html?_v=9f5febfd57a8a649c598d888f2d9e062#" +
-                              "https://l-chiu.com";
-        function postGAMessage() {
-            if (analytics_iframe_loaded && user_logged_in) {
-                var is_ajax = false;
-                analytics_frame.contentWindow.postMessage(['tick_google_analytics', is_ajax, user_logged_in, blog_is_nsfw, '/ceramics?route=custom_page'].join(';'), analytics_frame.src.split('/analytics.html')[0]);
-            }
-        }
-        function postCSMessage() {
-            COMSCORE = true;
-            analytics_frame.contentWindow.postMessage('enable_comscore;' + window.location, analytics_frame.src.split('/analytics.html')[0]);
-        }
-    })();
-</script><script type="text/javascript" nonce="ztz0BefNxNRDt79yZPkAcsVN4dI">!function(s){s.src='https://px.srvcs.tumblr.com/impixu?T=1583080025&J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDovL2wtY2hpdS5jb20vY2VyYW1pY3MiLCJyZXF0eXBlIjowLCJyb3V0ZSI6ImN1c3RvbV9wYWdlIn0=&U=APGPIEDDKJ&K=dbaad7caa6d5848651dd307dea4f019a55931d7dc81392a17db1a8f2b6707195&R=https%3A%2F%2Fl-chiu.com%2Fsoftboiled'.replace(/&R=[^&$]*/,'').concat('&R='+escape(document.referrer)).slice(0,2000).replace(/%.?.?$/,'');}(new Image());</script><noscript><img style="position:absolute;z-index:-3334;top:0px;left:0px;visibility:hidden;" src="https://px.srvcs.tumblr.com/impixu?T=1583080025&J=eyJ0eXBlIjoidXJsIiwidXJsIjoiaHR0cDovL2wtY2hpdS5jb20vY2VyYW1pY3MiLCJyZXF0eXBlIjowLCJyb3V0ZSI6ImN1c3RvbV9wYWdlIiwibm9zY3JpcHQiOjF9&U=APGPIEDDKJ&K=a719e9ac32594887a3fdb7d9504a26cb27a7ab6fc322eb5104d3b72d3c5073e2&R=https%3A%2F%2Fl-chiu.com%2Fsoftboiled"></noscript><noscript id="bootloader" data-bootstrap="{&quot;Components&quot;:{&quot;PostActivity&quot;:[],&quot;NotificationPoller&quot;:{&quot;messaging_keys&quot;:[],&quot;token&quot;:&quot;c86f8a500596474a7ef5034081f694bd&quot;,&quot;inbox_unread&quot;:0},&quot;DesktopDashboardLogo&quot;:{&quot;animations&quot;:[[&quot;https:\/\/assets.tumblr.com\/images\/logo\/hover-animations\/1.png?_v=161861acded461bb6e995593a3bae835&quot;,&quot;https:\/\/assets.tumblr.com\/images\/logo\/hover-animations\/1@2x.png?_v=496a774637302a598c851381d00009b0&quot;]]},&quot;TumblelogIframe&quot;:{&quot;unified&quot;:true,&quot;variant&quot;:null,&quot;isCompact&quot;:true,&quot;tumblelogBundleSrc&quot;:&quot;https:\/\/assets.tumblr.com\/client\/prod\/standalone\/tumblelog\/index.build.js?_v=26078f304fd710772512e9f1208a1358&quot;,&quot;tumblelogName&quot;:&quot;lindyzc&quot;,&quot;isLoggedIn&quot;:false,&quot;isFriend&quot;:false,&quot;formKey&quot;:&quot;&quot;,&quot;canSubscribe&quot;:false,&quot;isSubscribed&quot;:false,&quot;tumblelogTitle&quot;:&quot;L.Z.C.&quot;,&quot;tumblelogAvatar&quot;:&quot;https:\/\/66.media.tumblr.com\/avatar_976eaaade65b_64.pnj&quot;,&quot;tumblelogHost&quot;:&quot;https:\/\/l-chiu.com&quot;,&quot;isOptica&quot;:false,&quot;isCustomTheme&quot;:true,&quot;themeHeaderImage&quot;:&quot;https:\/\/static.tumblr.com\/f2002f55f18d69f42bf91d67bce70c45\/ppnsnoo\/6Ovpmlajm\/tumblr_static_tumblr_static_e1abm29u6mo84s44gwwg48gsg_focused_v3.jpg&quot;,&quot;themeBackgroundColor&quot;:&quot;#FAFAFA&quot;,&quot;themeTitleColor&quot;:&quot;#f5ad58&quot;,&quot;themeAccentColor&quot;:&quot;#529ECC&quot;,&quot;brag&quot;:false,&quot;adsEnabled&quot;:false,&quot;canShowAd&quot;:true,&quot;isPremium&quot;:false,&quot;showLrecAds&quot;:false,&quot;showStickyLrecBackfill&quot;:false,&quot;showGeminiAds&quot;:false,&quot;geminiSectionCodeDesktop&quot;:&quot;a10bca9c-0c5d-4a02-ab13-14ab8513d81d&quot;,&quot;geminiSectionCodeMobile&quot;:&quot;ced63809-b609-4aca-96a0-abc099acba6b&quot;,&quot;currentPageType&quot;:null,&quot;currentPage&quot;:false,&quot;searchQuery&quot;:&quot;&quot;,&quot;tag&quot;:&quot;&quot;,&quot;query&quot;:&quot;&quot;,&quot;chrono&quot;:false,&quot;postId&quot;:&quot;&quot;,&quot;src&quot;:&quot;https:\/\/l-chiu.com\/ceramics&quot;,&quot;postUrl&quot;:&quot;&quot;,&quot;isBlocked&quot;:null,&quot;isAdmin&quot;:false,&quot;lookupButtonUrl&quot;:&quot;&quot;,&quot;showSpamButton&quot;:false,&quot;showRootPostButton&quot;:false,&quot;rootPostUrl&quot;:&quot;&quot;,&quot;showRadarPostButton&quot;:false,&quot;radarKeys&quot;:&quot;&quot;,&quot;isUniblocked&quot;:false,&quot;isNsfw&quot;:false,&quot;isAdult&quot;:false,&quot;isSpam&quot;:false,&quot;isPrimaryBlog&quot;:false,&quot;canEdit&quot;:false,&quot;canReblogSelf&quot;:false,&quot;showLikeButton&quot;:false,&quot;showReblogButton&quot;:false,&quot;reblogUrl&quot;:&quot;&quot;,&quot;showFanMailButton&quot;:false,&quot;showMessagingButton&quot;:false,&quot;loginCheckIframeSrc&quot;:&quot;https:\/\/assets.tumblr.com\/assets\/html\/iframe\/login_check.html?_v=3de94a184d600617102ddd5b48fb36e9&quot;,&quot;appInstallUrls&quot;:{&quot;android&quot;:&quot;https:\/\/play.google.com\/store\/apps\/details?id=com.tumblr\u0026referrer=utm_source%3Dtumblr%26utm_medium%3Diframe%26utm_campaign%3Dtumblr_new_iframe&quot;,&quot;ios&quot;:&quot;https:\/\/itunes.apple.com\/app\/apple-store\/id305343404?pt=9029\u0026ct=tumblr_new_iframe\u0026mt=8&quot;},&quot;appOpenReferrer&quot;:&quot;tumblr_new_iframe&quot;,&quot;isShowSearch&quot;:false,&quot;supplyLogging&quot;:[],&quot;secondsSinceLastActivity&quot;:-1}},&quot;Flags&quot;:{&quot;doods&quot;:&quot;eyJmaWx0ZXJfbnNmdyI6dHJ1ZSwic2FmZV9tb2RlIjp0cnVlLCJzYWZlX21vZGVfZW5hYmxlZCI6dHJ1ZSwia2V5Y29tbWFuZF9hdXRvX3BhZ2luYXRlIjp0cnVlLCJsb2dnZWRfb3V0X3NlYXJjaCI6dHJ1ZSwia3Jha2VuX3dlYl9sb2dnaW5nX2xpYnJhcnkiOnRydWUsInR1bWJsZWxvZ19wb3BvdmVyIjp0cnVlLCJlbmFibGVfY2FwdHVyZV9qcyI6dHJ1ZSwidGFibGV0X2Jhbm5lcl9hY3RpdmUiOnRydWUsIm1vYmlsZV9iYW5uZXJfYWN0aXZlIjp0cnVlLCJsb2dfc2VhcmNoX2JveCI6dHJ1ZSwicG9wb3Zlcl9yZWNvbW1lbmRhdGlvbnMiOnRydWUsImluZGFzaF9yZWNvbW1lbmRhdGlvbnMiOnRydWUsInBvcHRpY2FfdHVtYmxlbG9nX3BvcG92ZXJzIjp0cnVlLCJkZXByZWNhdGVfZmVhdHVyZWRfdGFncyI6dHJ1ZSwiZGFzaGJvYXJkX3JlZnJlc2giOnRydWUsIm1vYmlsZV93ZWJfcGhvdG9zZXRzIjp0cnVlLCJtb2JpbGVfd2ViX2dhdGUiOnRydWUsIm1vYmlsZV93ZWJfcGFnZV90aXRsZXMiOnRydWUsImRvbnRfY2FzdF9qc19mb2xsb3dzIjp0cnVlLCJndWxwanNfYWRtaW4iOnRydWUsImVuYWJsZV9qc19lcnJvcnNfbG9nIjp0cnVlLCJlbmFibGVfanNfZXBoZW1lcmFsX2xvZyI6dHJ1ZSwibG9nX2xhZHkiOnRydWUsImRpc2NvdmVyeV9odWJfYWNjZXNzIjp0cnVlLCJsaXZlcGhvdG9zX3dlYiI6dHJ1ZSwidXNlcl90YWdfZmlsdGVyaW5nIjp0cnVlLCJwcm9qZWN0X3hfYXBwZWFsIjp0cnVlLCJwcm9qZWN0X3hfd2ViX3NlbnNpdGl2ZV9jb3ZlcnMiOnRydWUsInNhZmVfbW9kZV9vd25fcG9zdCI6dHJ1ZSwiaGlkZV9kZWZhdWx0X2hlYWRlcnNfYmxvZ19jYXJkcyI6dHJ1ZSwibm90aWZpY2F0aW9uX3JlcGx5X2xpbmtfdG9fbm90ZXMiOnRydWUsInR5cGluZ19pbmRpY2F0b3Jfd3JpdGUiOnRydWUsImdkcHJfZ3VjZV9pc19yZXF1aXJlZCI6dHJ1ZSwidHVtYmxyX3ZpZGVvX3Nwb25zb3JlZF9kYXkiOnRydWUsImNhcHRjaGE6dXNlX3JlY2FwdGNoYTIiOnRydWUsImxpdHRsZV9zaXN0ZXIiOnRydWUsImRhcmxhX2FkX2ZlZWRiYWNrIjp0cnVlLCJzdGF0dXNfaW5kaWNhdG9yIjp0cnVlLCJkaXNhYmxlX3lhaG9vX2JfY29va2llIjp0cnVlLCJsaXZlcGhvdG9zIjp0cnVlfQ==&quot;},&quot;Context&quot;:{&quot;name&quot;:&quot;default&quot;,&quot;time&quot;:1583080025000,&quot;userinfo&quot;:{&quot;primary&quot;:&quot;&quot;,&quot;name&quot;:&quot;&quot;,&quot;channels&quot;:[]},&quot;hosts&quot;:{&quot;assets_host&quot;:&quot;https:\/\/assets.tumblr.com&quot;,&quot;secure_assets_host&quot;:&quot;https:\/\/assets.tumblr.com&quot;,&quot;www_host&quot;:&quot;https:\/\/www.tumblr.com&quot;,&quot;secure_www_host&quot;:&quot;https:\/\/www.tumblr.com&quot;,&quot;embed_host&quot;:&quot;https:\/\/embed.tumblr.com&quot;,&quot;safe_host&quot;:&quot;https:\/\/safe.txmblr.com&quot;,&quot;platform_host&quot;:&quot;https:\/\/platform.tumblr.com&quot;},&quot;language&quot;:&quot;en_US&quot;,&quot;language_simple&quot;:&quot;en&quot;,&quot;assets&quot;:&quot;https:\/\/assets.tumblr.com\/client\/prod\/&quot;},&quot;Translations&quot;:{&quot;%1$sReport %2$s&#039;s post?%3$sIf it violates our community guidelines, we&#039;ll remove it.%4$s&quot;:&quot;%1$sReport %2$s&#039;s reblog?%3$sIf it violates our community guidelines, we&#039;ll remove it.%4$s&quot;,&quot;%1$sReport %2$s&#039;s reply?%3$sIf it violates our community guidelines, we&#039;ll remove it.%4$s&quot;:&quot;%1$sReport %2$s&#039;s reblog?%3$sIf it violates our community guidelines, we&#039;ll remove it.%4$s&quot;}}"></noscript><script src="https://assets.tumblr.com/client/prod/standalone/tumblelog/index.build.js?_v=26078f304fd710772512e9f1208a1358"></script></body>
+{block:IndexPage}<script src="https://static.tumblr.com/wgijwsy/u2vm2hxv6/jquery.infinitescroll.min.js"></script>{/block:IndexPage}
+<script src="https://cdn.jsdelivr.net/gh/1stepremoved/lindy-chius-website-adjustments@07eb2673aa799311bc6beaea7a622d22c399085c/scrolling-function.js"></script></body>
 </html>
