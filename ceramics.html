@@ -33,11 +33,6 @@ html {
     overflow:hidden;
 }
  
-@media only screen and (max-width: 480px) {
-  img {
-    width: 20%;
-  }
-}
  
 body {
     margin:0;
@@ -414,88 +409,6 @@ aside .links li:last-child {
     content:counter(number);
 }
  
-/* audio posts */
- 
-.audiowrap {
-    position:relative;
-    height:60px;
-    overflow:hidden;
-    background-color:rgb(245,245,245);
-}
-.albumart {
-    position:absolute;
-    top:0;
-    right:0;
-    z-index:1;
-    display:block;
-    width:60px;
-    height:60px;
-    opacity:.9;
-    background-size:cover;
-    display:none;
-}
-.audio {
-    position:absolute;
-    display:inline-block;
-    left:0;
-    top:0;
-    right:0;
-    bottom:0;
-    text-align:left;
-    line-height:60px;
-}
-.audio .player {
-    width:27px;
-    height:27px;
-    left:16px;
-    top:16px;
-    opacity:.4;
-    line-height:0;
-    overflow:hidden;
-    position:absolute;
-}
-.audio .track {
-    overflow:hidden;
-    line-height:15px;
-    margin-left:60px;
-    width: calc(100% - 60px);
-    display:inline-block;
-    vertical-align:middle;
-}
-.audio .track span {
-    display:block;
-    max-height:15px;
-    white-space:nowrap;
-    overflow:hidden;
-    text-overflow:ellipsis;
-    margin-right:75px;
-}
- 
-.pagination {
-    font-style:italic;
-    text-align:center;
-    display:none;
-}
-.notes {
-    padding:0;
-}
-.notes li {
-    display:block;
-}
-.notes img {
-    display:none;
-}
-.notes .more_notes_link_container {
-    text-align:inherit!important;
-}
-#tumblr_controls,
-.tmblr-iframe {
-    position:fixed!important;
-    opacity:.4!important;
-    -webkit-filter:invert(100%);
-    -webkit-backface-visibility:hidden;
-    padding:4px;
-}
 #theme {
     position:fixed;
     display:inline-block;
@@ -564,6 +477,40 @@ aside .links li:last-child {
     }
 }
 
+@media only screen and (max-width: 480px) {
+    .entry {
+        position:relative;
+        height:90vh;
+        max-height:90vh;
+        width:calc(100vw - 10vh);
+        padding:5vh;
+        margin:auto;
+        overflow:hidden;
+        text-align:center;
+        counter-increment:posts;
+    }
+    .entry .post {
+        width:80vh;
+        padding:0 16px;
+        overflow:auto;
+    }
+    .post,
+    .media,
+    .photo {
+        display:block;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        max-height:90vh;
+        max-width:calc(100vw - 10vh);
+    }
+    .post img {
+        max-height:90vh;
+       
+        width:100%;
+    }
+}
  
 </style>
 <link href="//static.tumblr.com/qudkd6d/OcDnl99gb/style.css" rel="stylesheet" type="text/css">
@@ -591,7 +538,8 @@ aside .links li:last-child {
 <article class="entry ph">
 <section class="post">
     <a class="photo" href="#">
-        <img src="https://raw.githubusercontent.com/lindyzc/ceramics/master/1a.jpg">
+        <img src="https://raw.githubusercontent.com/lindyzc/ceramics/master/1a.jpg"
+                max-width:100%;>
         <div class="num accent"> / 2 </div>
     </a>
     
