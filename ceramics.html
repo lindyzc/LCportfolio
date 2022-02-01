@@ -477,12 +477,12 @@ aside .links li:last-child {
     }
 }
 
-@media only screen and (max-width: 480px) {
+@media (max-width: 700px) {
     .entry {
         position:relative;
         height:90vh;
         max-height:90vh;
-        width:100vw;
+        width:calc(100vw - 10vh);
         padding:5vh;
         margin:auto;
         overflow:hidden;
@@ -490,7 +490,7 @@ aside .links li:last-child {
         counter-increment:posts;
     }
     .entry .post {
-        width:100vw;
+        width:80vh;
         padding:0 16px;
         overflow:auto;
     }
@@ -506,10 +506,12 @@ aside .links li:last-child {
         max-width:calc(100vw - 10vh);
     }
     .post img {
-        height: auto;
-        width: 100%;
+        max-height:90vh;
+        max-width:calc(100vw - 10vh);
+        width:auto;
     }
 }
+
  
 </style>
 <link href="//static.tumblr.com/qudkd6d/OcDnl99gb/style.css" rel="stylesheet" type="text/css">
