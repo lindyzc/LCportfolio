@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<!--
+ 
+ 
+ 
+ 
+ 
+                portfolio @ shythemes
+ 
+ 
+ 
+ 
+ 
+-->
+<title>✿ lindy chiu : portfolio ✿</title>
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+<link rel="shortcut icon" href="favicon.ico"> 
+<meta name="description" content="lindy chiu">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+ 
+<script src="//use.edgefonts.net/lato.js"></script>
+ 
+<style type="text/css">
+ 
+/* general */
+
+html {
+    overflow:hidden;
+}
+ 
+body {
+    margin:0;
+    font-size:10px;
+    font-family:lato, sans-serif;
+    line-height:16px;
+    overflow:hidden;
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-font-smoothing:antialiased;
+    font-smoothing:antialiased;
+    color:rgb(72,72,72);
+    background:rgb(255,255,255);
+}
+a {
+    color:inherit;
+    text-decoration:none;
+    -webkit-transition:color .3s ease-out;
+    transition:color .3s ease-out;
+}
+a:hover {
+    color:rgb(36,36,36);
+}
+small, sub {
+    font-size:inherit;
+    vertical-align:baseline;
+}
+blockquote, ol, ul, pre {
+    margin:0 0 9px;
+}
+p {
+    margin:0;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin:0;
+    font-size:inherit;
+    font-weight:inherit;
+}
+ol, ul {
+    list-style:none;
+    padding:0;
+}
+img {
+    border:0;
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+figure {
+    margin:12px 0 9px;
+    display:block;
+}
+hr {
+    border:0;
+    margin:13px 0;
+    height:1px;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    background-color:rgb(224,224,224);
+}
+::-webkit-scrollbar {
+    width:17px;
+    height:17px;
+}
+::-webkit-scrollbar {
+    background-color:rgb(255,255,255);
+}
+::-webkit-scrollbar-track {
+    border:8px solid rgb(255,255,255);
+    background-color:rgb(240,240,240);
+}
+::-webkit-scrollbar-thumb {
+    border:8px solid rgb(255,255,255);
+    background-color:rgb(144,144,144);
+}
+ 
+/* accents */
+ 
+.title {
+    font-size:12px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    font-family:lato, 'trebuchet ms', sans-serif;
+    color:rgb(36,36,36);
+}
+.accent {
+    font-size:8px;
+    letter-spacing:1px;
+    font-family:lato, 'trebuchet ms', sans-serif;
+    text-transform:uppercase;
+    color:rgb(144,144,144);
+}
+.accent b, .notes a {
+    font-size:8px;
+    font-weight:normal;
+    font-style:normal!important;
+    letter-spacing:1px;
+    font-family:lato, 'trebuchet ms', sans-serif;
+    text-transform:uppercase;
+    color:rgb(36,36,36);
+}
+.tumblr_blog:before,
+blockquote:after {
+    content:'';
+    display:block;
+    margin:13px auto;
+    width:40px;
+    height:1px;
+    background-color:rgb(224,224,224);
+}
+.source .tumblr_blog:before,
+.text > p .tumblr_blog:before,
+blockquote:last-child:after {
+    display:none;
+}
+.text a {
+    font-style:italic;
+}
+.text img {
+    margin:9px auto;
+}
+.text hr {
+    margin:9px 40%;
+}
+.caption,
+.question,
+.source {
+    color:rgb(144,144,144);
+}
+ol {
+    padding:0;
+    list-style-type:none;
+}
+ol li {
+    counter-increment:olist;
+}
+ol li::before {
+    content:counter(olist, decimal-leading-zero) '.';
+    margin-right:.33em;
+}
+li ol, li ul {
+    margin:0;
+}
+ 
+ul {
+    padding:0;
+    list-style-type:none;
+}
+svg {
+    display:block;
+    width:10px;
+    height:auto;
+    opacity:.75;
+    overflow:visible;
+}
+svg path {
+    fill:rgb(132,132,132);
+    -webkit-transition:fill .6s ease-out;
+    transition:fill .6s ease-out;
+}
+ 
+/* container */
+ 
+.main {
+    margin:0 auto;
+}
+ 
+ 
+/* header */
+ 
+header {
+    position:fixed;
+    top:5vh;
+    left:5vh;
+    z-index:10;
+    width:50vh;
+    margin:-6px 0 0;
+}
+header h1 {
+    margin:0 0 1px;
+}
+ 
+/* links */
+ 
+aside {
+    position:fixed;
+    left:5vh;
+    bottom:5vh;
+    margin-bottom:-6px;
+    z-index:11;
+}
+aside .links li {
+    display:inline-block;
+    margin:0 10px 0 0;
+}
+aside .links li:last-child {
+    margin:0;
+}
+ 
+/* icons */
+ 
+.in {
+    position:fixed;
+    bottom:5vh;
+    right:5vh;
+    z-index:12;
+    margin-bottom:-8px;
+    margin-right:-3px;
+    width:21px;
+    height:auto;
+}
+.in svg {
+    visibility:hidden;
+    width:15px;
+    padding:3px;
+}
+.no {
+    position:fixed;
+    bottom:5vh;
+    right:5vh;
+    z-index:12;
+    margin-bottom:-6px;
+    margin-right:22px;
+    width:21px;
+    height:auto;
+}
+.no svg {
+    width:12px;
+    padding:3px;
+}
+.ic {
+    position:fixed;
+    top:5vh;
+    right:5vh;
+    z-index:13;
+    margin:-3px 0 0 0;
+}
+.ic svg {
+    width:12px;
+}
+
+.content {
+    overflow-y:scroll;
+    height:100vh;
+    scroll-snap-type:y mandatory;
+}
+ 
+/* entries */
+.entry {
+    scroll-snap-align:center;
+    position:relative;
+    height:75vh;
+    max-height:75vh;
+    width:calc(100vw - 25vh);
+    padding:12.5vh;
+    margin:auto;
+    overflow:hidden;
+    text-align:center;
+    counter-increment:posts;
+}
+.entry:last-child {
+    margin-bottom:0;
+}
+.entry .post {
+    width:75vh;
+    padding:0 16px;
+    overflow:auto;
+}
+.entry.ph > .post {
+    width:auto;
+    padding:0;
+    overflow:visible;
+}
+.post,
+.media,
+.photo {
+    display:block;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    max-height:75vh;
+    max-width:calc(100vw - 25vh);
+}
+.post img {
+    max-height:75vh;
+    max-width:calc(100vw - 25vh);
+    width:auto;
+}
+ 
+/* post info */
+ .b {
+    visibility:hidden;
+    position:absolute;
+    right:5vh;
+    bottom:5vh;
+    margin-bottom:-8px;
+    margin-right:-3px;
+    opacity:0;
+    z-index:10001;
+}
+.b .button {
+    display:block;
+    width:20px;
+    height:20px;
+    cursor:pointer;
+}
+.info, #notes {
+    display:none;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:1;
+    background-color:rgb(255,255,255);
+}
+.tags {
+    {block:IndexPage}{block:ifNotShowTags}display:none;{/block:ifNotShowTags}{/block:IndexPage}
+}
+.tags a {
+    margin:0 5px;
+    font-style:normal;
+}
+ 
+
+/* post types */
+ 
+.text {
+    margin:13px 0 0;
+}
+.text:first-child,
+.text *:first-child {
+    margin-top:0;
+}
+.text:last-child,
+.text *:last-child {
+    margin-bottom:0;
+}
+.caption {
+    {block:IndexPage}{block:ifNotShowCaptions}display:none;{/block:ifNotShowCaptions}{/block:IndexPage}
+}
+.chat .line {
+    margin:13px 0 0;
+}
+.quote {
+    font-size:11px;
+}
+.question .sender {
+    margin:1px 0 0;
+}
+.photo {
+    opacity:0;
+    z-index:0;
+    counter-increment:number;
+    -webkit-transition:opacity .6s ease-in-out;
+    transition:opacity .6s ease-in-out;
+    pointer-events: none;
+}
+.photo.active {
+    opacity:1;
+    z-index:1;
+    pointer-events: all;
+}
+.photo .num {
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    text-align:center;
+    padding:10px 0 0;
+    background-color:rgb(255,255,255);
+}
+.photo .num:before {
+    content:counter(number);
+}
+ 
+/* audio posts */
+ 
+.audiowrap {
+    position:relative;
+    height:60px;
+    overflow:hidden;
+    background-color:rgb(245,245,245);
+}
+.albumart {
+    position:absolute;
+    top:0;
+    right:0;
+    z-index:1;
+    display:block;
+    width:60px;
+    height:60px;
+    opacity:.9;
+    background-size:cover;
+    display:none;
+}
+.audio {
+    position:absolute;
+    display:inline-block;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    text-align:left;
+    line-height:60px;
+}
+.audio .player {
+    width:27px;
+    height:27px;
+    left:16px;
+    top:16px;
+    opacity:.4;
+    line-height:0;
+    overflow:hidden;
+    position:absolute;
+}
+.audio .track {
+    overflow:hidden;
+    line-height:15px;
+    margin-left:60px;
+    width: calc(100% - 60px);
+    display:inline-block;
+    vertical-align:middle;
+}
+.audio .track span {
+    display:block;
+    max-height:15px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    margin-right:75px;
+}
+ 
+.pagination {
+    font-style:italic;
+    text-align:center;
+    display:none;
+}
+.notes {
+    padding:0;
+}
+.notes li {
+    display:block;
+}
+.notes img {
+    display:none;
+}
+.notes .more_notes_link_container {
+    text-align:inherit!important;
+}
+#tumblr_controls,
+.tmblr-iframe {
+    position:fixed!important;
+    opacity:.4!important;
+    -webkit-filter:invert(100%);
+    -webkit-backface-visibility:hidden;
+    padding:4px;
+}
+#theme {
+    position:fixed;
+    display:inline-block;
+    bottom:10px;
+    right:10px;
+    z-index:999;
+    padding:5px;
+    line-height:1em;
+    background-color:rgb(255,255,255);
+}
+#infscr-loading {
+    display:none!important;
+}
+#tumblr_controls,
+.tmblr-iframe.tmblr-iframe--desktop-logged-in-controls {
+    position:fixed!important;
+    top:-9px!important;
+    right:0!important;
+    {block:IndexPage}opacity:0!important;{/block:IndexPage}
+    -webkit-filter:invert(100%);
+    -webkit-backface-visibility:hidden;
+    transform:scale(.93,.93);
+    -webkit-transform:scale(.93,.93);
+    padding:5vh calc(5vh + 21px) 5vh 5vh;
+    -webkit-transition:opacity .3s ease-out;
+    transition:opacity .3s ease-out;
+}
+#tumblr_controls:hover,
+.tmblr-iframe.tmblr-iframe--desktop-logged-in-controls:hover {
+    opacity:.4!important;
+}
+
+
+@media (max-width: 700px) {
+    .entry {
+        position:relative;
+        height:90vh;
+        max-height:90vh;
+        width:calc(100vw - 10vh);
+        padding:5vh;
+        margin:auto;
+        overflow:hidden;
+        text-align:center;
+        counter-increment:posts;
+    }
+    .entry .post {
+        width:80vh;
+        padding:0 16px;
+        overflow:auto;
+    }
+    .post,
+    .media,
+    .photo {
+        display:block;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        max-height:90vh;
+        max-width:calc(100vw - 10vh);
+    }
+    .post img {
+        max-height:90vh;
+        max-width:calc(100vw - 10vh);
+        width:auto;
+    }
+}
+
+ 
+</style>
+<link href="//static.tumblr.com/qudkd6d/OcDnl99gb/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="main">
+
+<aside>
+  <div class="links accent">
+    <li><a href="about.html">about</a></li>
+    <li><a href="clay.html">clay</a></li>
+    <li><a href="sketches.html">sketches</a></li>
+    <li><a href="paper.html">paper</a></li>
+   <li><a href="index.html" style="color:#71b65a;">/ film /</a></li>
+ 
+  </div>
+</aside>
+
+<header>
+    <h1 class="title"></br><a href="index.html"><img class="title" src= "https://github.com/lindyzc/sketches/blob/master/Logo%20trans%20-%20compressed.png?raw=true" width="100" height="100" alt="Lindy Chiu"></a></h1>
+    <div class="desc accentother"></div>
+
+ <meta property="og:image" content="https://github.com/lindyzc/sketches/blob/master/Logo%20trans.png?raw=true">
+ <meta property="og:description" content="Lindy Chiu">
+</header>
+
+
+<div class="content">
+  <article class="entry ph">
+    <section class="post">
+        <a class="photo">
+            <img src="https://github.com/lindyzc/film/blob/main/1.jpg?raw=true">
+        </a>
+    </section>
+  </article>
+  
+ <article class="entry ph">
+    <section class="post">
+        <a class="photo" href="#">
+            <img src="https://github.com/lindyzc/film/blob/main/2.jpg?raw=true">
+        </a>
+    </section>
+  </article>
+  
+<article class="entry ph">
+    <section class="post">
+        <a class="photo" href="#">
+            <img src="https://github.com/lindyzc/film/blob/main/3.jpg?raw=true">
+        </a>
+    </section>
+  </article>
+
+<article class="entry ph">
+    <section class="post">
+        <a class="photo" href="#">
+            <img src="https://github.com/lindyzc/film/blob/main/4-a.jpg?raw=true">
+            <div class="num accent"> / 2 </br>  </div>
+        </a>
+        <a class="photo" href="#">
+            <img src="https://github.com/lindyzc/film/blob/main/4-b.jpg?raw=true">
+            <div class="num accent"> / 2 </br> </div>
+  </a>       
+    </section>
+  </article>
+
+<article class="entry ph">
+    <section class="post">
+        <a class="photo" href="#">
+            <img src="https://github.com/lindyzc/film/blob/main/5-a.jpg?raw=true">
+            <div class="num accent"> / 3 </br>  </div>
+        </a>
+        <a class="photo" href="#">
+            <img src="https://github.com/lindyzc/film/blob/main/5-b.jpg?raw=true">
+            <div class="num accent"> / 3</br>  </div>
+        </a>
+        <a class="photo" href="#">
+            <img src="https://github.com/lindyzc/film/blob/main/5-c.jpg?raw=true">
+            <div class="num accent"> / 3</br>  </div>
+        </a>
+    </section>
+  </article>
+
+<article class="entry ph">
+    <section class="post">
+        <a class="photo" href="#">
+            <img src="https://github.com/lindyzc/film/blob/main/6-a.jpg?raw=true">
+            <div class="num accent"> / 3 </br>  </div>
+        </a>
+        <a class="photo" href="#">
+            <img src="https://github.com/lindyzc/film/blob/main/6-b.jpg?raw=true">
+            <div class="num accent"> / 3</br>  </div>
+        </a>
+        <a class="photo" href="#">
+            <img src="https://github.com/lindyzc/film/blob/main/6-c.jpg?raw=true">
+            <div class="num accent"> / 3</br>  </div>
+        </a>
+    </section>
+  </article>
+
+<article class="entry ph">
+    <section class="post">
+        <a class="photo" href="#">
+            <img src="https://github.com/lindyzc/film/blob/main/7-a.jpg?raw=true">
+            <div class="num accent"> / 2 </br>  </div>
+        </a>
+        <a class="photo" href="#">
+            <img src="https://github.com/lindyzc/film/blob/main/7-b.jpg?raw=true">
+            <div class="num accent"> / 2</br>  </div>
+        </a>
+       </section>
+  </article>
+
+<article class="entry ph">
+    <section class="post">
+        <a class="photo" href="#">
+            <img src="https://github.com/lindyzc/film/blob/main/8-a.jpg?raw=true">
+            <div class="num accent"> / 2 </br>  </div>
+        </a>
+        <a class="photo" href="#">
+            <img src="https://github.com/lindyzc/film/blob/main/8-b.jpg?raw=true">
+            <div class="num accent"> / 2 </br>  </div>
+        </a>
+    </section>
+  </article>
+
+<article class="entry ph">
+    <section class="post">
+        <a class="photo" href="#">
+            <img src="https://github.com/lindyzc/film/blob/main/9-a.jpg?raw=true">
+            <div class="num accent"> / 2 </br>  </div>
+        </a>
+        <a class="photo" href="#">
+            <img src="https://github.com/lindyzc/film/blob/main/9-b.jpg?raw=true">
+            <div class="num accent"> / 2</br>  </div>
+        </a>
+    </section>
+  </article>
+
+<article class="entry ph">
+    <section class="post">
+        <a class="photo" href="#">
+            <img src="https://github.com/lindyzc/film/blob/main/10-a.jpg?raw=true">
+            <div class="num accent"> / 2 </br>  </div>
+        </a>
+        <a class="photo" href="#">
+            <img src="https://github.com/lindyzc/film/blob/main/10-b.jpg?raw=true">
+            <div class="num accent"> / 2 </br>  </div>
+        </a>
+    </section>
+  </article>
+
+<article class="entry ph">
+    <section class="post">
+        <a class="photo" href="#">
+            <img src="https://github.com/lindyzc/film/blob/main/11-a.jpg?raw=true">
+            <div class="num accent"> / 3 </br>  </div>
+        </a>
+        <a class="photo" href="#">
+            <img src="https://github.com/lindyzc/film/blob/main/11-b.jpg?raw=true">
+            <div class="num accent"> / 3 </br>  </div>
+        </a>
+        <a class="photo" href="#">
+            <img src="https://github.com/lindyzc/film/blob/main/11-c.jpg?raw=true">
+            <div class="num accent"> / 3 </br>  </div>
+        </a>
+    </section>
+  </article>
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="https://static.tumblr.com/qudkd6d/Az6nkemqr/pxuphotoset.min.js"></script>
+<script src="//static.tumblr.com/fwgzvyf/l6jnyutne/shythemes.vr.js"></script>
+<script src="//static.tumblr.com/fwgzvyf/4hio5bpwj/jquery.mousewheel.min.js"></script>
+<script src="https://static.tumblr.com/wgijwsy/u2vm2hxv6/jquery.infinitescroll.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/1stepremoved/lindy-chius-website-adjustments@07eb2673aa799311bc6beaea7a622d22c399085c/scrolling-function.js"></script></body>
+</html>
