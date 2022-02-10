@@ -2,19 +2,14 @@
 <html xmlns="https://www.w3.org/1999/xhtml">
 <head>
 <!--
-
-                portfolio @ shythemes
- 
+portfolio @ shythemes 
 -->
 <title>✿ lindy chiu : about ✿</title>
 <link rel="alternate" type="application/rss+xml" href="{RSS}">
 <link rel="shortcut icon" href="favicon.ico">
 <meta name="description" content="lindy chiu">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
- 
 <script src="//use.edgefonts.net/lato.js"></script>
- 
 <style type="text/css">
  
 /* general */
@@ -22,7 +17,8 @@
 html {
     overflow:hidden;
 }
- 
+/* body formatting */
+  
 body {
     margin:0;
     font-size:10px;
@@ -35,6 +31,8 @@ body {
     color:rgb(72,72,72);
     background:rgb(255,255,255);
 }
+/* link formatting */
+  
 a {
     color:inherit;
     text-decoration:none;
@@ -44,25 +42,38 @@ a {
 a:hover {
     color:rgb(36,36,36);
 }
-small, sub {
+  
+/* text */
+small {
     font-size:inherit;
     vertical-align:baseline;
 }
+  
 blockquote, ol, ul, pre {
     margin:0 0 9px;
 }
+
+/* paragraph */
 p {
     margin:0;
 }
+
+/* headers formatting */
 h1, h2, h3, h4, h5, h6 {
     margin:0;
     font-size:inherit;
     font-weight:inherit;
 }
+  
+/* list format */
+ 
 ol, ul {
     list-style:none;
     padding:0;
 }
+
+/* image format */
+  
 img {
     border:0;
     max-width:100%;
@@ -70,18 +81,13 @@ img {
     display:block;
     float: left;
 }
+  
 figure {
     margin:12px 0 9px;
     display:block;
 }
-hr {
-    border:0;
-    margin:13px 0;
-    height:1px;
-    -moz-box-sizing:border-box;
-    box-sizing:border-box;
-    background-color:rgb(224,224,224);
-}
+  
+
 ::-webkit-scrollbar {
     width:17px;
     height:17px;
@@ -115,14 +121,6 @@ hr {
     font-weight:bold;
     color:rgb(36,36,36);
 }
-.bioref {
-    font-size:10px;
-    letter-spacing:0px;
-    font-family:lato, 'trebuchet ms', sans-serif;
-    color:rgb(36,36,36);
-    font-style:normal;
-    hover { COLOR:blue; text-decoration:underline;}
-}
 .accent {
     font-size:8px;
     letter-spacing:1px;
@@ -130,43 +128,16 @@ hr {
     text-transform:uppercase;
     color:rgb(144,144,144);
 }
-.accent b, .notes a {
-    font-size:8px;
-    font-weight:normal;
-    font-style:normal!important;
-    letter-spacing:1px;
-    font-family:lato, 'trebuchet ms', sans-serif;
-    text-transform:uppercase;
-    color:rgb(36,36,36);
-}
-.tumblr_blog:before,
-blockquote:after {
-    content:'';
-    display:block;
-    margin:13px auto;
-    width:40px;
-    height:1px;
-    background-color:rgb(224,224,224);
-}
-.source .tumblr_blog:before,
-.text > p .tumblr_blog:before,
-blockquote:last-child:after {
-    display:none;
-}
+ 
+/* text formatting of elements */
+  
 .text a {
     font-style:italic;
 }
 .text img {
     margin:9px auto;
 }
-.text hr {
-    margin:9px 40%;
-}
-.caption,
-.question,
-.source {
-    color:rgb(144,144,144);
-}
+
 ol {
     padding:0;
     list-style-type:none;
@@ -186,25 +157,12 @@ ul {
     padding:0;
     list-style-type:none;
 }
-svg {
-    display:block;
-    width:10px;
-    height:auto;
-    opacity:.75;
-    overflow:visible;
-}
-svg path {
-    fill:rgb(132,132,132);
-    -webkit-transition:fill .6s ease-out;
-    transition:fill .6s ease-out;
-}
  
 /* container */
  
 .main {
     margin:0 auto;
 }
- 
  
 /* header */
  
@@ -328,168 +286,7 @@ aside .links li:last-child {
     width:auto;
 }
  
-/* post info */
- .b {
-    visibility:hidden;
-    position:absolute;
-    right:5vh;
-    bottom:5vh;
-    margin-bottom:-8px;
-    margin-right:-3px;
-    opacity:0;
-    z-index:10001;
-}
-.b .button {
-    display:block;
-    width:20px;
-    height:20px;
-    cursor:pointer;
-}
-.info, #notes {
-    display:none;
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    z-index:1;
-    background-color:rgb(255,255,255);
-}
-.tags {
-    {block:IndexPage}{block:ifNotShowTags}display:none;{/block:ifNotShowTags}{/block:IndexPage}
-}
-.tags a {
-    margin:0 5px;
-    font-style:normal;
-}
- 
-
-/* post types */
- 
-.text {
-    margin:13px 0 0;
-}
-.text:first-child,
-.text *:first-child {
-    margin-top:0;
-}
-.text:last-child,
-.text *:last-child {
-    margin-bottom:0;
-}
-.caption {
-    {block:IndexPage}{block:ifNotShowCaptions}display:none;{/block:ifNotShowCaptions}{/block:IndexPage}
-}
-.chat .line {
-    margin:13px 0 0;
-}
-.quote {
-    font-size:11px;
-}
-.question .sender {
-    margin:1px 0 0;
-}
-.photo {
-    opacity:0;
-    z-index:0;
-    counter-increment:number;
-    -webkit-transition:opacity .6s ease-in-out;
-    transition:opacity .6s ease-in-out;
-    pointer-events: none;
-}
-.photo.active {
-    opacity:1;
-    z-index:1;
-    pointer-events: all;
-}
-.photo .num {
-    position:absolute;
-    top:100%;
-    left:0;
-    right:0;
-    text-align:center;
-    padding:10px 0 0;
-    background-color:rgb(255,255,255);
-}
-.photo .num:before {
-    content:counter(number);
-}
- 
-/* audio posts */
- 
-.audiowrap {
-    position:relative;
-    height:60px;
-    overflow:hidden;
-    background-color:rgb(245,245,245);
-}
-.albumart {
-    position:absolute;
-    top:0;
-    right:0;
-    z-index:1;
-    display:block;
-    width:60px;
-    height:60px;
-    opacity:.9;
-    background-size:cover;
-    display:none;
-}
-.audio {
-    position:absolute;
-    display:inline-block;
-    left:0;
-    top:0;
-    right:0;
-    bottom:0;
-    text-align:left;
-    line-height:60px;
-}
-.audio .player {
-    width:27px;
-    height:27px;
-    left:16px;
-    top:16px;
-    opacity:.4;
-    line-height:0;
-    overflow:hidden;
-    position:absolute;
-}
-.audio .track {
-    overflow:hidden;
-    line-height:15px;
-    margin-left:60px;
-    width: calc(100% - 60px);
-    display:inline-block;
-    vertical-align:middle;
-}
-.audio .track span {
-    display:block;
-    max-height:15px;
-    white-space:nowrap;
-    overflow:hidden;
-    text-overflow:ellipsis;
-    margin-right:75px;
-}
- 
-.pagination {
-    font-style:italic;
-    text-align:center;
-    display:none;
-}
-.notes {
-    padding:0;
-}
-.notes li {
-    display:block;
-}
-.notes img {
-    display:none;
-}
-.notes .more_notes_link_container {
-    text-align:inherit!important;
-}
-#tumblr_controls,
+  #tumblr_controls,
 .tmblr-iframe {
     position:fixed!important;
     opacity:.4!important;
@@ -530,6 +327,10 @@ aside .links li:last-child {
 }
  
  @media only screen and (max-width: 480px) {
+   article {
+    width: 100%;
+    height: auto;
+  }
  @media (max-width: 700px) {
      .entry {
          position:relative;
