@@ -385,6 +385,12 @@ aside .links li:last-child {
   box-sizing: border-box;
 }
   
+  .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+  
 </style>
 <link href="//static.tumblr.com/qudkd6d/OcDnl99gb/style.css" rel="stylesheet" type="text/css">
 </head>
@@ -407,7 +413,7 @@ aside .links li:last-child {
 </header>
  
  <body>
-  <div class="overflow: scroll;">
+  <div class="row">
 <article class="entry">
 <section class="post">
  
@@ -422,6 +428,7 @@ aside .links li:last-child {
  </article>
   </div>
  </div>
+
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
