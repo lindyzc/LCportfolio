@@ -269,23 +269,6 @@ aside .links li:last-child {
     padding:0;
     overflow:visible;
 }
-.post,
-.media,
-.photo {
-    display:block;
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    max-height:75vh;
-    max-width:calc(100vw - 25vh)
-    width:50%;
-}
-.post img {
-    max-height:75vh;
-    max-width:calc(100vw - 25vh);
-    width:50%;
-}
  
   #tumblr_controls,
 .tmblr-iframe {
@@ -346,16 +329,31 @@ aside .links li:last-child {
          width: 100%;
      }
      
-    .post-text{
-        display:block;
-        position:absolute;
-        max-height:90vh;
-        max-width:calc(100vw - 10vh);
-       top:50%;
-        left:50%;
-        transform:translate(-50%,-50%);
-        width:50%;
-        float:left;
+     .post,
+     .media,
+     .photo {
+    display:block;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    max-height:75vh;
+    max-width:calc(100vw - 25vh)
+    width:50%;
+}
+.post img {
+    max-height:75vh;
+    max-width:calc(100vw - 25vh);
+    width:50%;
+}
+    .post-text{display:block;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    max-height:75vh;
+    max-width:calc(100vw - 25vh)
+    width:50%;
     }
     .post img {
         max-height:90vh;
