@@ -404,14 +404,18 @@ aside .links li:last-child {
           <strong>Lindy Chiu (趙瑩瑩)</strong> is a Chinese-American interdisciplinary artist born and raised in NYC. 
           After completing her dual BA in Studio Art: Printmaking & Biological Sciences from SUNY Binghamton, 
           she balances working with non-profit institutions and continuing her artistic practice.
-        </p></br>
+        </p>
         <p>
           Her upbringing informs her practices by serving as a lens from which to look through, 
           bringing influence from the changing phases of time throughout her life. 
           Through her practice with film photography, she captures moments of palpable solitude and contemplation, 
           while her ceramic practice allows her to explore creating clay artifacts of time, memory, and emotion.
         </p>
-       
+        <p>
+          Based in NYC, where she was born and raised, Lindy sees her art as a collective keepsake of her life. 
+          Using various mediums, she expresses different aspects of her life: how she feels, where she is, what she sees.
+        </p>
+
         <p class="contact">
           <strong>Connect:</strong> <a href="mailto:lindy.z.chiu@gmail.com">lindy.z.chiu@gmail.com</a> <br>
           <a href="https://www.instagram.com/lindy.etc/" target="_blank">
@@ -430,7 +434,7 @@ aside .links li:last-child {
       display: flex;
       justify-content: center; /* horizontal center */
       align-items: center;     /* vertical center */
-      background: #fff;        /* optional: set background color */
+      background: #fff;        /* optional background */
     }
 
     .about-section {
@@ -444,12 +448,14 @@ aside .links li:last-child {
     .about-container {
       display: flex;
       flex-wrap: wrap;
-      align-items: flex-start;
+      align-items: flex-start; /* align text with top of image */
       gap: 2rem;
     }
 
     .about-image {
       flex: 1 1 45%;
+      display: flex;
+      align-items: flex-start;
     }
 
     .about-image img {
@@ -457,6 +463,7 @@ aside .links li:last-child {
       height: auto;
       border-radius: 8px;
       object-fit: cover;
+      display: block;
     }
 
     .about-text {
@@ -478,15 +485,17 @@ aside .links li:last-child {
     @media (max-width: 768px) {
       .about-container {
         flex-direction: column;
-        text-align: center;
+        align-items: center;
       }
 
       .about-text {
         text-align: left;
+        width: 100%;
       }
     }
   </style>
 </body>
+
 
 
 
