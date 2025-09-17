@@ -391,22 +391,97 @@ aside .links li:last-child {
 </header>
 
 
+<body>
+  <section class="about-section">
+    <div class="about-container">
+      <!-- Left: Image -->
+      <div class="about-image">
+        <img src="https://github.com/lindyzc/film-photos/blob/master/paris-self.jpg?raw=true" alt="Portrait of Lindy Chiu">
+      </div>
 
- <body>
-  <section class="post">
-    <p align="left">
-    <img src="https://github.com/lindyzc/film-photos/blob/master/paris-self.jpg?raw=true"style="margin-right:15px;margin-bottom:15px;">
-    Lindy Chiu (趙瑩瑩) is Chinese-American interdisciplinary artist born and raised in NYC. After completing her dual BA in Studio Art: Printmaking & Biological Sciences from SUNY Binghamton, she balances working with non-profit institutions and continuing her artistic practice. 
-     Her upbringing informs her practices by serving as a lens from which to look through, bringing influence from the changing phases of time throughout her life.
-     Through her practice with film photography, she captures moments of palpable solitude and contemplation, while her ceramic practices allows her to explore creating clay artifacts of time, memory, and emotion. 
-     
-     based in N.Y.C, where she was born and raised. To her, her art is a collective keepsake of her life. Using various mediums, she expresses different aspects of her life: how she feels, where she is, what she sees.</p>
- </br>
- <p align="left">Connect: lindy.z.chiu@gmail.com </br><a href="https://www.instagram.com/lindy.etc/"><img class="ig_icon" src="https://raw.githubusercontent.com/lindyzc/hello-world/master/glyph-logo_May2016.png"style="width:20px;height:20px;"></a>
- </section>
- </div>
- </div>
+      <!-- Right: Text -->
+      <div class="about-text">
+        <p>
+          <strong>Lindy Chiu (趙瑩瑩)</strong> is a Chinese-American interdisciplinary artist born and raised in NYC. 
+          After completing her dual BA in Studio Art: Printmaking & Biological Sciences from SUNY Binghamton, 
+          she balances working with non-profit institutions and continuing her artistic practice.
+        </p>
+        <p>
+          Her upbringing informs her practices by serving as a lens from which to look through, 
+          bringing influence from the changing phases of time throughout her life. 
+          Through her practice with film photography, she captures moments of palpable solitude and contemplation, 
+          while her ceramic practice allows her to explore creating clay artifacts of time, memory, and emotion.
+        </p>
+        <p>
+          Based in NYC, where she was born and raised, Lindy sees her art as a collective keepsake of her life. 
+          Using various mediums, she expresses different aspects of her life: how she feels, where she is, what she sees.
+        </p>
+
+        <p class="contact">
+          <strong>Connect:</strong> <a href="mailto:lindy.z.chiu@gmail.com">lindy.z.chiu@gmail.com</a> <br>
+          <a href="https://www.instagram.com/lindy.etc/" target="_blank">
+            <img class="ig_icon" src="https://raw.githubusercontent.com/lindyzc/hello-world/master/glyph-logo_May2016.png" alt="Instagram" />
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .about-section {
+      padding: 2rem;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .about-image {
+      flex: 1 1 45%;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .about-text {
+      flex: 1 1 50%;
+      min-width: 280px;
+    }
+
+    .contact {
+      margin-top: 1rem;
+    }
+
+    .contact .ig_icon {
+      width: 20px;
+      height: 20px;
+      margin-top: 5px;
+    }
+
+    /* Mobile friendly stack */
+    @media (max-width: 768px) {
+      .about-container {
+        flex-direction: column;
+      }
+
+      .about-image, .about-text {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
 </body>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="https://static.tumblr.com/qudkd6d/Az6nkemqr/pxuphotoset.min.js"></script>
