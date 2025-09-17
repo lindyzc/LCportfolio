@@ -390,7 +390,6 @@ aside .links li:last-child {
  <meta property="og:description" content="Lindy Chiu">
 </header>
 
-
 <body>
   <section class="about-section">
     <div class="about-container">
@@ -405,18 +404,14 @@ aside .links li:last-child {
           <strong>Lindy Chiu (趙瑩瑩)</strong> is a Chinese-American interdisciplinary artist born and raised in NYC. 
           After completing her dual BA in Studio Art: Printmaking & Biological Sciences from SUNY Binghamton, 
           she balances working with non-profit institutions and continuing her artistic practice.
-        </p>
+        </p></br>
         <p>
           Her upbringing informs her practices by serving as a lens from which to look through, 
           bringing influence from the changing phases of time throughout her life. 
           Through her practice with film photography, she captures moments of palpable solitude and contemplation, 
           while her ceramic practice allows her to explore creating clay artifacts of time, memory, and emotion.
         </p>
-        <p>
-          Based in NYC, where she was born and raised, Lindy sees her art as a collective keepsake of her life. 
-          Using various mediums, she expresses different aspects of her life: how she feels, where she is, what she sees.
-        </p>
-
+       
         <p class="contact">
           <strong>Connect:</strong> <a href="mailto:lindy.z.chiu@gmail.com">lindy.z.chiu@gmail.com</a> <br>
           <a href="https://www.instagram.com/lindy.etc/" target="_blank">
@@ -428,10 +423,22 @@ aside .links li:last-child {
   </section>
 
   <style>
+    /* Center everything in the viewport */
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center; /* horizontal center */
+      align-items: center;     /* vertical center */
+      background: #fff;        /* optional: set background color */
+    }
+
     .about-section {
       padding: 2rem;
       font-family: Arial, sans-serif;
       line-height: 1.6;
+      max-width: 1000px;
+      width: 100%;
     }
 
     .about-container {
@@ -439,8 +446,6 @@ aside .links li:last-child {
       flex-wrap: wrap;
       align-items: flex-start;
       gap: 2rem;
-      max-width: 1000px;
-      margin: 0 auto;
     }
 
     .about-image {
@@ -469,18 +474,20 @@ aside .links li:last-child {
       margin-top: 5px;
     }
 
-    /* Mobile friendly stack */
+    /* Mobile stack */
     @media (max-width: 768px) {
       .about-container {
         flex-direction: column;
+        text-align: center;
       }
 
-      .about-image, .about-text {
-        flex: 1 1 100%;
+      .about-text {
+        text-align: left;
       }
     }
   </style>
 </body>
+
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
