@@ -391,106 +391,185 @@ aside .links li:last-child {
 </header>
 
 <body>
-  <section class="about-section">
-    <div class="about-container">
-      <!-- Left: Image -->
-      <div class="about-image">
-        <img src="https://github.com/lindyzc/film-photos/blob/master/paris-self.jpg?raw=true" alt="Portrait of Lindy Chiu">
-      </div>
+  <main class="page">
+    <section class="about-section" aria-labelledby="about-title">
+      <div class="about-container">
+        <!-- IMAGE (left on desktop, top on mobile) -->
+        <figure class="about-image" role="img" aria-label="Portrait of Lindy Chiu">
+          <picture>
+            <!-- If you have a local/webp version available at /images/, it will be used.
+                 If not, the browser will fall back to the JPG below. -->
+            <source srcset="/images/paris-self.webp" type="image/webp">
+            <img
+              src="https://github.com/lindyzc/film-photos/blob/master/paris-self.jpg?raw=true"
+              alt="Portrait of Lindy Chiu"
+              loading="lazy"
+            >
+          </picture>
+        </figure>
 
-      <!-- Right: Text -->
-      <div class="about-text">
-        <p>
-          <strong>Lindy Chiu (趙瑩瑩)</strong> is a Chinese-American interdisciplinary artist born and raised in NYC. 
-          After completing her dual BA in Studio Art: Printmaking & Biological Sciences from SUNY Binghamton, 
-          she balances working with non-profit institutions and continuing her artistic practice.
-        </p></br>
-        <p>
-          Her upbringing informs her practices by serving as a lens from which to look through, 
-          bringing influence from the changing phases of time throughout her life. 
-          Through her practice with film photography, she captures moments of palpable solitude and contemplation, 
-          while her ceramic practice allows her to explore creating clay artifacts of time, memory, and emotion.
-        </p>
-     
-        <p class="contact">
-          <strong>Connect:</strong> <a href="mailto:lindy.z.chiu@gmail.com">lindy.z.chiu@gmail.com</a> <br>
-          <a href="https://www.instagram.com/lindy.etc/" target="_blank">
-            <img class="ig_icon" src="https://raw.githubusercontent.com/lindyzc/hello-world/master/glyph-logo_May2016.png" alt="Instagram" />
-          </a>
-        </p>
+        <!-- TEXT (right on desktop, below on mobile) -->
+        <div class="about-text">
+          <h1 id="about-title">Lindy Chiu (趙瑩瑩)</h1>
+
+          <p>
+            After completing her dual BA in Studio Art: Printmaking &amp; Biological Sciences from SUNY Binghamton,
+            Lindy balances work with non-profit institutions while maintaining an active interdisciplinary art practice.
+          </p>
+
+          <p>
+            Her upbringing informs her work as a lens through time — film photography captures quiet moments of solitude and contemplation,
+            while ceramics allow her to explore memory, time, and emotional artifacts.
+          </p>
+
+          <p>
+            Based in New York City, Lindy treats her art as a collective keepsake of life: how she feels, where she is, and what she sees.
+          </p>
+
+          <p class="contact">
+            <strong>Connect:</strong>
+            <a href="mailto:lindy.z.chiu@gmail.com">lindy.z.chiu@gmail.com</a><br>
+            <a href="https://www.instagram.com/lindy.etc/" target="_blank" rel="noopener noreferrer">
+              <img class="ig_icon" src="https://raw.githubusercontent.com/lindyzc/hello-world/master/glyph-logo_May2016.png" alt="Instagram">
+            </a>
+          </p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <style>
-    /* Page-level centering */
-    body {
+    :root {
+      --max-width: 1000px;
+      --gap: 2rem;
+      --side-padding: 2rem;
+    }
+
+    /* full-height page and center the about block on desktop */
+    html, body {
+      height: 100%;
       margin: 0;
-      min-height: 100vh;
+    }
+
+    body {
       display: flex;
-      justify-content: center;   /* horizontal center */
-      align-items: center;       /* vertical center */
+      align-items: center;       /* vertical centering of the overall block on desktop */
+      justify-content: center;   /* horizontal centering */
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       background: #fff;
-      font-family: Arial, sans-serif;
+      color: #111;
       line-height: 1.6;
     }
 
-    .about-section {
-      max-width: 1000px;
+    /* container that limits width so centering is obvious on large screens */
+    .page {
       width: 100%;
-      padding: 2rem;
+      padding: var(--side-padding);
+      box-sizing: border-box;
     }
 
+    .about-section {
+      max-width: var(--max-width);
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    /* The key row: keep items side-by-side on desktop, tops aligned */
     .about-container {
       display: flex;
-      gap: 2rem;
-      align-items: flex-start; /* ✅ forces image & text to share top line */
+      gap: var(--gap);
+      align-items: flex-start; /* IMPORTANT: aligns the top (start-line) of image & text */
+      width: 100%;
+      box-sizing: border-box;
     }
 
+    /* IMAGE column */
     .about-image {
-      flex: 1 1 45%;
+      flex: 0 0 45%;
+      max-width: 45%;
+      margin: 0;               /* remove default figure margin */
+      display: flex;
+      align-items: flex-start; /* ensure image sits at top of this column */
     }
 
     .about-image img {
       width: 100%;
       height: auto;
+      display: block;
       border-radius: 8px;
       object-fit: cover;
-      display: block;
     }
 
+    /* TEXT column */
     .about-text {
-      flex: 1 1 50%;
-      min-width: 280px;
+      flex: 1 1 55%;
+      min-width: 260px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start; /* ensure text block starts at top */
+    }
+
+    .about-text h1 {
+      margin: 0 0 0.5rem 0; /* remove top margin so h1 aligns with image top */
+      font-size: 1.25rem;
+      line-height: 1.2;
+    }
+
+    .about-text p {
+      margin: 0 0 1rem 0;
     }
 
     .contact {
-      margin-top: 1rem;
+      margin-top: 0.5rem;
     }
 
-    .contact .ig_icon {
+    .ig_icon {
       width: 20px;
       height: 20px;
-      margin-top: 5px;
+      vertical-align: middle;
+      margin-top: 6px;
     }
 
-    /* Mobile stack: image above text */
+    /* ----------------- MOBILE -----------------
+       Stack image above text, center them horizontally, ensure they align within the viewport.
+       Also stop vertically centering the whole page (content should start near top on phones).
+    */
     @media (max-width: 768px) {
       body {
-        align-items: flex-start; /* don’t vertically center on mobile */
+        align-items: flex-start; /* don't vertically center on mobile */
+        padding-top: 1rem;
+        padding-bottom: 1rem;
       }
 
       .about-container {
         flex-direction: column;
+        align-items: center; /* center both image and text horizontally */
+        gap: 1.25rem;
+      }
+
+      .about-image,
+      .about-text {
+        flex: none;
+        width: 100%;
+        max-width: 720px;   /* both share same maximum width so they visually align */
+      }
+
+      .about-image {
+        max-width: 90%;
       }
 
       .about-text {
-        width: 100%;
+        box-sizing: border-box;
+        padding: 0 1rem;    /* padding so the text doesn't touch the screen edges */
+        text-align: left;   /* keep paragraphs left-aligned for readability */
+      }
+
+      .about-text h1 {
+        text-align: left;
       }
     }
   </style>
 </body>
-
 
 
 
