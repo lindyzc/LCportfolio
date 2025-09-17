@@ -389,7 +389,8 @@ aside .links li:last-child {
  <meta property="og:image" content="https://github.com/lindyzc/sketches/blob/master/Logo%20trans.png?raw=true">
  <meta property="og:description" content="Lindy Chiu">
 </header>
-<body>
+
+ <body>
   <section class="about-section">
     <div class="about-container">
       <!-- Left: Image -->
@@ -426,28 +427,24 @@ aside .links li:last-child {
   </section>
 
   <style>
-    /* Center everything in the viewport */
+    /* Reset body */
     body {
       margin: 0;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center; /* horizontal center */
-      align-items: center;     /* vertical center */
       background: #fff;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
     }
 
     .about-section {
-      padding: 2rem;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
+      padding: 4rem 2rem;
       max-width: 1000px;
-      width: 100%;
+      margin: 0 auto;
     }
 
     .about-container {
       display: flex;
       gap: 2rem;
-      align-items: flex-start; /* ✅ forces tops to align */
+      align-items: flex-start; /* ✅ align tops */
     }
 
     .about-image {
@@ -465,9 +462,6 @@ aside .links li:last-child {
     .about-text {
       flex: 1 1 50%;
       min-width: 280px;
-      display: flex;
-      flex-direction: column; /* ensures content starts at top */
-      justify-content: flex-start; /* align to top */
     }
 
     .contact {
@@ -480,15 +474,15 @@ aside .links li:last-child {
       margin-top: 5px;
     }
 
-    /* Mobile stack */
+    /* Mobile stack: image above text */
     @media (max-width: 768px) {
       .about-container {
         flex-direction: column;
-        align-items: center;
       }
 
+      .about-image,
       .about-text {
-        width: 100%;
+        flex: 1 1 100%;
       }
     }
   </style>
