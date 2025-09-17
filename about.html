@@ -389,7 +389,6 @@ aside .links li:last-child {
  <meta property="og:image" content="https://github.com/lindyzc/sketches/blob/master/Logo%20trans.png?raw=true">
  <meta property="og:description" content="Lindy Chiu">
 </header>
-
 <body>
   <section class="about-section">
     <div class="about-container">
@@ -434,7 +433,7 @@ aside .links li:last-child {
       display: flex;
       justify-content: center; /* horizontal center */
       align-items: center;     /* vertical center */
-      background: #fff;        /* optional background */
+      background: #fff;
     }
 
     .about-section {
@@ -447,15 +446,12 @@ aside .links li:last-child {
 
     .about-container {
       display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start; /* align text with top of image */
       gap: 2rem;
+      align-items: flex-start; /* ✅ forces tops to align */
     }
 
     .about-image {
       flex: 1 1 45%;
-      display: flex;
-      align-items: flex-start;
     }
 
     .about-image img {
@@ -469,6 +465,9 @@ aside .links li:last-child {
     .about-text {
       flex: 1 1 50%;
       min-width: 280px;
+      display: flex;
+      flex-direction: column; /* ensures content starts at top */
+      justify-content: flex-start; /* align to top */
     }
 
     .contact {
@@ -478,23 +477,8 @@ aside .links li:last-child {
     .contact .ig_icon {
       width: 20px;
       height: 20px;
-      margin-top: 5px;
-    }
+      margin-
 
-    /* Mobile stack */
-    @media (max-width: 768px) {
-      .about-container {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .about-text {
-        text-align: left;
-        width: 100%;
-      }
-    }
-  </style>
-</body>
 
 
 
